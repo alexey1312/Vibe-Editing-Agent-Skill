@@ -417,9 +417,10 @@ def retime_cues(edl: EDL, source: str, cues: list[dict]) -> tuple[list[dict], li
 
 # --- cut candidates ----------------------------------------------------------------------------
 
+# Short on purpose: words such as "короче" or "значит" are fillers in one sentence and meaning in the next.
 FILLERS = {
     "en": {"um", "uh", "erm", "hmm", "like", "basically", "actually"},
-    "ru": {"э", "ээ", "эээ", "м", "мм", "ну", "вот", "типа", "короче", "значит"},
+    "ru": {"э", "ээ", "эээ", "м", "мм", "ну", "вот", "типа"},
 }
 
 

@@ -168,6 +168,12 @@ class TranscriptTests(unittest.TestCase):
         repeat = next(c for c in found if c["kind"] == "repeat")
         self.assertEqual((repeat["start"], repeat["end"]), (0.0, 0.6))
 
+    def test_ambiguous_words_are_not_fillers(self) -> None:
+        # "Ролик на треть короче." — the comparative, not the filler.
+        words = [{"word": w, "start": i * 0.4, "end": i * 0.4 + 0.3} for i, w in
+                 enumerate(["Ролик", "на", "треть", "короче."])]
+        self.assertEqual([c for c in edl.candidates(words, 0.5, "ru") if c["kind"] == "filler"], [])
+
 
 class RenderCommandTests(unittest.TestCase):
     def setUp(self) -> None:
