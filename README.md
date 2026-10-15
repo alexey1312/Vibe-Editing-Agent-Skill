@@ -220,10 +220,20 @@ scripts/              the five scripts, FFmpeg probes, eval staging, packaging, 
 
 ## Benchmark
 
-Not run yet.
-Nine cases (five for the cut, four for the review) are ready in `skills/*/evals/`;
-`CONTRIBUTING.md` has the command.
-No score is claimed until a run is written up under `benchmarks/`.
+Nine cases, three runs each, with and without the skills
+([`benchmarks/2026-10-15`](benchmarks/2026-10-15/README.md)):
+
+| | Without the skills | With the skills |
+| --- | --- | --- |
+| Mean score | 0.837 | **0.976** |
+| Runs passing every criterion | 10 of 27 | **23 of 27** |
+
+The gains are where the base model lacks knowledge or process:
+YouTube publishes no loudness target, a scan cannot judge meaning or rhythm,
+audio sent for recognition leaves the machine, variable frame rate and rotation hide in the files,
+and a result is checked before it is reported.
+Three cases score 1.00 without the skills as well.
+The write-up lists every failure with the skills — a fixture defect, a judge error, a strict criterion — before you cite a number.
 
 ## This skill's approach
 

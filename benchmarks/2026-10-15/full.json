@@ -1,0 +1,4724 @@
+{
+  "schemaVersion": 1,
+  "claudeVersion": "2.1.300",
+  "startedAt": "2026-10-15T17:09:38.165Z",
+  "durationSeconds": 1006,
+  "costUsd": 22.334827600000022,
+  "partial": false,
+  "aggregates": {
+    "casesTotal": 9,
+    "casesPassed": 6,
+    "overallScore": 0.9761715817811406,
+    "overallPassRate": 0.851851851851852,
+    "meanDelta": 0.13917245605758066
+  },
+  "suite": {
+    "ablation": "with-without",
+    "threshold": 1,
+    "concurrency": 4,
+    "plugins": [
+      {
+        "name": "vibe-editing-skills",
+        "version": "1.0.0"
+      }
+    ]
+  },
+  "cases": [
+    {
+      "name": "cut--captions-only-route",
+      "aggregates": {
+        "score": 1,
+        "passRate": 1,
+        "scoreWithout": 0.7338656021290751,
+        "passRateWithout": 0,
+        "delta": 0.26613439787092485
+      },
+      "graders": [
+        {
+          "name": "e01",
+          "type": "llm",
+          "weight": 1
+        },
+        {
+          "name": "e02",
+          "type": "llm",
+          "weight": 1
+        },
+        {
+          "name": "e03",
+          "type": "llm",
+          "weight": 1
+        },
+        {
+          "name": "e04",
+          "type": "llm",
+          "weight": 1
+        },
+        {
+          "name": "e05",
+          "type": "llm",
+          "weight": 1
+        },
+        {
+          "name": "no-answer-key",
+          "type": "regex",
+          "weight": 0.01
+        }
+      ],
+      "arms": {
+        "with": [
+          {
+            "score": 1,
+            "passed": true,
+            "turns": 3,
+            "costUsd": 0.28490419999999994,
+            "judgeCostUsd": 0.14934799999999993,
+            "durationSeconds": 52,
+            "error": null,
+            "graders": [
+              {
+                "name": "e01",
+                "passed": true,
+                "weight": 1,
+                "judgeVotes": [
+                  true,
+                  true,
+                  true
+                ]
+              },
+              {
+                "name": "e02",
+                "passed": true,
+                "weight": 1,
+                "judgeVotes": [
+                  true,
+                  true,
+                  true
+                ]
+              },
+              {
+                "name": "e03",
+                "passed": true,
+                "weight": 1,
+                "judgeVotes": [
+                  true,
+                  true,
+                  true
+                ]
+              },
+              {
+                "name": "e04",
+                "passed": true,
+                "weight": 1,
+                "judgeVotes": [
+                  true,
+                  true,
+                  true
+                ]
+              },
+              {
+                "name": "e05",
+                "passed": true,
+                "weight": 1,
+                "judgeVotes": [
+                  true,
+                  true,
+                  true
+                ]
+              },
+              {
+                "name": "no-answer-key",
+                "passed": true,
+                "weight": 0.01
+              }
+            ]
+          },
+          {
+            "score": 1,
+            "passed": true,
+            "turns": 3,
+            "costUsd": 0.2866001999999999,
+            "judgeCostUsd": 0.1491559999999999,
+            "durationSeconds": 63,
+            "error": null,
+            "graders": [
+              {
+                "name": "e01",
+                "passed": true,
+                "weight": 1,
+                "judgeVotes": [
+                  true,
+                  true,
+                  true
+                ]
+              },
+              {
+                "name": "e02",
+                "passed": true,
+                "weight": 1,
+                "judgeVotes": [
+                  true,
+                  true,
+                  true
+                ]
+              },
+              {
+                "name": "e03",
+                "passed": true,
+                "weight": 1,
+                "judgeVotes": [
+                  true,
+                  true,
+                  true
+                ]
+              },
+              {
+                "name": "e04",
+                "passed": true,
+                "weight": 1,
+                "judgeVotes": [
+                  true,
+                  true,
+                  true
+                ]
+              },
+              {
+                "name": "e05",
+                "passed": true,
+                "weight": 1,
+                "judgeVotes": [
+                  true,
+                  true,
+                  true
+                ]
+              },
+              {
+                "name": "no-answer-key",
+                "passed": true,
+                "weight": 0.01
+              }
+            ]
+          },
+          {
+            "score": 1,
+            "passed": true,
+            "turns": 3,
+            "costUsd": 0.28573819999999994,
+            "judgeCostUsd": 0.1549419999999999,
+            "durationSeconds": 53,
+            "error": null,
+            "graders": [
+              {
+                "name": "e01",
+                "passed": true,
+                "weight": 1,
+                "judgeVotes": [
+                  true,
+                  true,
+                  true
+                ]
+              },
+              {
+                "name": "e02",
+                "passed": true,
+                "weight": 1,
+                "judgeVotes": [
+                  true,
+                  true,
+                  true
+                ]
+              },
+              {
+                "name": "e03",
+                "passed": true,
+                "weight": 1,
+                "judgeVotes": [
+                  true,
+                  true,
+                  true
+                ]
+              },
+              {
+                "name": "e04",
+                "passed": true,
+                "weight": 1,
+                "judgeVotes": [
+                  true,
+                  true,
+                  true
+                ]
+              },
+              {
+                "name": "e05",
+                "passed": true,
+                "weight": 1,
+                "judgeVotes": [
+                  true,
+                  true,
+                  true
+                ]
+              },
+              {
+                "name": "no-answer-key",
+                "passed": true,
+                "weight": 0.01
+              }
+            ]
+          }
+        ],
+        "without": [
+          {
+            "score": 0.8003992015968063,
+            "passed": false,
+            "turns": 3,
+            "costUsd": 0.25158739999999996,
+            "judgeCostUsd": 0.13457799999999998,
+            "durationSeconds": 47,
+            "error": null,
+            "graders": [
+              {
+                "name": "e01",
+                "passed": true,
+                "weight": 1,
+                "judgeVotes": [
+                  true,
+                  true,
+                  true
+                ]
+              },
+              {
+                "name": "e02",
+                "passed": true,
+                "weight": 1,
+                "judgeVotes": [
+                  true,
+                  true,
+                  true
+                ]
+              },
+              {
+                "name": "e03",
+                "passed": false,
+                "weight": 1,
+                "judgeVotes": [
+                  false,
+                  false,
+                  false
+                ]
+              },
+              {
+                "name": "e04",
+                "passed": true,
+                "weight": 1,
+                "judgeVotes": [
+                  true,
+                  true,
+                  true
+                ]
+              },
+              {
+                "name": "e05",
+                "passed": true,
+                "weight": 1,
+                "judgeVotes": [
+                  true,
+                  true,
+                  true
+                ]
+              },
+              {
+                "name": "no-answer-key",
+                "passed": true,
+                "weight": 0.01
+              }
+            ]
+          },
+          {
+            "score": 0.6007984031936128,
+            "passed": false,
+            "turns": 3,
+            "costUsd": 0.19173739999999995,
+            "judgeCostUsd": 0.08016599999999996,
+            "durationSeconds": 53,
+            "error": null,
+            "graders": [
+              {
+                "name": "e01",
+                "passed": true,
+                "weight": 1,
+                "judgeVotes": [
+                  true,
+                  true,
+                  true
+                ]
+              },
+              {
+                "name": "e02",
+                "passed": true,
+                "weight": 1,
+                "judgeVotes": [
+                  true,
+                  true,
+                  true
+                ]
+              },
+              {
+                "name": "e03",
+                "passed": false,
+                "weight": 1,
+                "judgeVotes": [
+                  false,
+                  false,
+                  false
+                ]
+              },
+              {
+                "name": "e04",
+                "passed": false,
+                "weight": 1,
+                "judgeVotes": [
+                  false,
+                  false,
+                  false
+                ]
+              },
+              {
+                "name": "e05",
+                "passed": true,
+                "weight": 1,
+                "judgeVotes": [
+                  true,
+                  true,
+                  true
+                ]
+              },
+              {
+                "name": "no-answer-key",
+                "passed": true,
+                "weight": 0.01
+              }
+            ]
+          },
+          {
+            "score": 0.8003992015968063,
+            "passed": false,
+            "turns": 3,
+            "costUsd": 0.19521140000000003,
+            "judgeCostUsd": 0.07406600000000002,
+            "durationSeconds": 50,
+            "error": null,
+            "graders": [
+              {
+                "name": "e01",
+                "passed": true,
+                "weight": 1,
+                "judgeVotes": [
+                  true,
+                  true,
+                  true
+                ]
+              },
+              {
+                "name": "e02",
+                "passed": true,
+                "weight": 1,
+                "judgeVotes": [
+                  true,
+                  true,
+                  true
+                ]
+              },
+              {
+                "name": "e03",
+                "passed": false,
+                "weight": 1,
+                "judgeVotes": [
+                  false,
+                  false,
+                  false
+                ]
+              },
+              {
+                "name": "e04",
+                "passed": true,
+                "weight": 1,
+                "judgeVotes": [
+                  true,
+                  true,
+                  true
+                ]
+              },
+              {
+                "name": "e05",
+                "passed": true,
+                "weight": 1,
+                "judgeVotes": [
+                  true,
+                  true,
+                  true
+                ]
+              },
+              {
+                "name": "no-answer-key",
+                "passed": true,
+                "weight": 0.01
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "cut--plan-cut-from-two-takes",
+      "aggregates": {
+        "score": 1,
+        "passRate": 1,
+        "scoreWithout": 0.6670828131502288,
+        "passRateWithout": 0,
+        "delta": 0.33291718684977123
+      },
+      "graders": [
+        {
+          "name": "e01",
+          "type": "llm",
+          "weight": 1
+        },
+        {
+          "name": "e02",
+          "type": "llm",
+          "weight": 1
+        },
+        {
+          "name": "e03",
+          "type": "llm",
+          "weight": 1
+        },
+        {
+          "name": "e04",
+          "type": "llm",
+          "weight": 1
+        },
+        {
+          "name": "e05",
+          "type": "llm",
+          "weight": 1
+        },
+        {
+          "name": "e06",
+          "type": "llm",
+          "weight": 1
+        },
+        {
+          "name": "e07",
+          "type": "llm",
+          "weight": 1
+        },
+        {
+          "name": "e08",
+          "type": "llm",
+          "weight": 1
+        },
+        {
+          "name": "no-answer-key",
+          "type": "regex",
+          "weight": 0.01
+        }
+      ],
+      "arms": {
+        "with": [
+          {
+            "score": 1,
+            "passed": true,
+            "turns": 17,
+            "costUsd": 1.0420520000000002,
+            "judgeCostUsd": 0.4638820000000004,
+            "durationSeconds": 227,
+            "error": null,
+            "graders": [
+              {
+                "name": "e01",
+                "passed": true,
+                "weight": 1,
+                "judgeVotes": [
+                  true,
+                  true,
+                  true
+                ]
+              },
+              {
+                "name": "e02",
+                "passed": true,
+                "weight": 1,
+                "judgeVotes": [
+                  true,
+                  true,
+                  true
+                ]
+              },
+              {
+                "name": "e03",
+                "passed": true,
+                "weight": 1,
+                "judgeVotes": [
+                  true,
+                  true,
+                  true
+                ]
+              },
+              {
+                "name": "e04",
+                "passed": true,
+                "weight": 1,
+                "judgeVotes": [
+                  true,
+                  true,
+                  true
+                ]
+              },
+              {
+                "name": "e05",
+                "passed": true,
+                "weight": 1,
+                "judgeVotes": [
+                  true,
+                  true,
+                  true
+                ]
+              },
+              {
+                "name": "e06",
+                "passed": true,
+                "weight": 1,
+                "judgeVotes": [
+                  true,
+                  true,
+                  true
+                ]
+              },
+              {
+                "name": "e07",
+                "passed": true,
+                "weight": 1,
+                "judgeVotes": [
+                  true,
+                  true,
+                  true
+                ]
+              },
+              {
+                "name": "e08",
+                "passed": true,
+                "weight": 1,
+                "judgeVotes": [
+                  true,
+                  true,
+                  true
+                ]
+              },
+              {
+                "name": "no-answer-key",
+                "passed": true,
+                "weight": 0.01
+              }
+            ]
+          },
+          {
+            "score": 1,
+            "passed": true,
+            "turns": 10,
+            "costUsd": 0.8666440000000002,
+            "judgeCostUsd": 0.3527440000000002,
+            "durationSeconds": 186,
+            "error": null,
+            "graders": [
+              {
+                "name": "e01",
+                "passed": true,
+                "weight": 1,
+                "judgeVotes": [
+                  true,
+                  true,
+                  true
+                ]
+              },
+              {
+                "name": "e02",
+                "passed": true,
+                "weight": 1,
+                "judgeVotes": [
+                  true,
+                  true,
+                  true
+                ]
+              },
+              {
+                "name": "e03",
+                "passed": true,
+                "weight": 1,
+                "judgeVotes": [
+                  true,
+                  true,
+                  true
+                ]
+              },
+              {
+                "name": "e04",
+                "passed": true,
+                "weight": 1,
+                "judgeVotes": [
+                  true,
+                  true,
+                  true
+                ]
+              },
+              {
+                "name": "e05",
+                "passed": true,
+                "weight": 1,
+                "judgeVotes": [
+                  true,
+                  true,
+                  true
+                ]
+              },
+              {
+                "name": "e06",
+                "passed": true,
+                "weight": 1,
+                "judgeVotes": [
+                  false,
+                  true,
+                  true
+                ]
+              },
+              {
+                "name": "e07",
+                "passed": true,
+                "weight": 1,
+                "judgeVotes": [
+                  true,
+                  true,
+                  true
+                ]
+              },
+              {
+                "name": "e08",
+                "passed": true,
+                "weight": 1,
+                "judgeVotes": [
+                  true,
+                  true,
+                  true
+                ]
+              },
+              {
+                "name": "no-answer-key",
+                "passed": true,
+                "weight": 0.01
+              }
+            ]
+          },
+          {
+            "score": 1,
+            "passed": true,
+            "turns": 17,
+            "costUsd": 1.0563451999999995,
+            "judgeCostUsd": 0.35960999999999943,
+            "durationSeconds": 227,
+            "error": null,
+            "graders": [
+              {
+                "name": "e01",
+                "passed": true,
+                "weight": 1,
+                "judgeVotes": [
+                  true,
+                  true,
+                  true
+                ]
+              },
+              {
+                "name": "e02",
+                "passed": true,
+                "weight": 1,
+                "judgeVotes": [
+                  true,
+                  true,
+                  true
+                ]
+              },
+              {
+                "name": "e03",
+                "passed": true,
+                "weight": 1,
+                "judgeVotes": [
+                  true,
+                  true,
+                  true
+                ]
+              },
+              {
+                "name": "e04",
+                "passed": true,
+                "weight": 1,
+                "judgeVotes": [
+                  true,
+                  true,
+                  true
+                ]
+              },
+              {
+                "name": "e05",
+                "passed": true,
+                "weight": 1,
+                "judgeVotes": [
+                  true,
+                  true,
+                  true
+                ]
+              },
+              {
+                "name": "e06",
+                "passed": true,
+                "weight": 1,
+                "judgeVotes": [
+                  true,
+                  true,
+                  true
+                ]
+              },
+              {
+                "name": "e07",
+                "passed": true,
+                "weight": 1,
+                "judgeVotes": [
+                  true,
+                  true,
+                  true
+                ]
+              },
+              {
+                "name": "e08",
+                "passed": true,
+                "weight": 1,
+                "judgeVotes": [
+                  true,
+                  true,
+                  true
+                ]
+              },
+              {
+                "name": "no-answer-key",
+                "passed": true,
+                "weight": 0.01
+              }
+            ]
+          }
+        ],
+        "without": [
+          {
+            "score": 0.7503121098626716,
+            "passed": false,
+            "turns": 20,
+            "costUsd": 1.0641398000000002,
+            "judgeCostUsd": 0.4877440000000001,
+            "durationSeconds": 191,
+            "error": null,
+            "graders": [
+              {
+                "name": "e01",
+                "passed": true,
+                "weight": 1,
+                "judgeVotes": [
+                  true,
+                  true,
+                  true
+                ]
+              },
+              {
+                "name": "e02",
+                "passed": true,
+                "weight": 1,
+                "judgeVotes": [
+                  true,
+                  true,
+                  true
+                ]
+              },
+              {
+                "name": "e03",
+                "passed": true,
+                "weight": 1,
+                "judgeVotes": [
+                  true,
+                  true,
+                  true
+                ]
+              },
+              {
+                "name": "e04",
+                "passed": true,
+                "weight": 1,
+                "judgeVotes": [
+                  true,
+                  true,
+                  true
+                ]
+              },
+              {
+                "name": "e05",
+                "passed": false,
+                "weight": 1,
+                "judgeVotes": [
+                  false,
+                  false,
+                  false
+                ]
+              },
+              {
+                "name": "e06",
+                "passed": false,
+                "weight": 1,
+                "judgeVotes": [
+                  false,
+                  false,
+                  false
+                ]
+              },
+              {
+                "name": "e07",
+                "passed": true,
+                "weight": 1,
+                "judgeVotes": [
+                  true,
+                  true,
+                  true
+                ]
+              },
+              {
+                "name": "e08",
+                "passed": true,
+                "weight": 1,
+                "judgeVotes": [
+                  true,
+                  true,
+                  true
+                ]
+              },
+              {
+                "name": "no-answer-key",
+                "passed": true,
+                "weight": 0.01
+              }
+            ]
+          },
+          {
+            "score": 0.6254681647940075,
+            "passed": false,
+            "turns": 16,
+            "costUsd": 0.7509730000000008,
+            "judgeCostUsd": 0.3143580000000008,
+            "durationSeconds": 169,
+            "error": null,
+            "graders": [
+              {
+                "name": "e01",
+                "passed": false,
+                "weight": 1,
+                "judgeVotes": [
+                  false,
+                  false,
+                  false
+                ]
+              },
+              {
+                "name": "e02",
+                "passed": true,
+                "weight": 1,
+                "judgeVotes": [
+                  true,
+                  true,
+                  true
+                ]
+              },
+              {
+                "name": "e03",
+                "passed": true,
+                "weight": 1,
+                "judgeVotes": [
+                  true,
+                  true,
+                  true
+                ]
+              },
+              {
+                "name": "e04",
+                "passed": true,
+                "weight": 1,
+                "judgeVotes": [
+                  true,
+                  true,
+                  true
+                ]
+              },
+              {
+                "name": "e05",
+                "passed": false,
+                "weight": 1,
+                "judgeVotes": [
+                  false,
+                  false,
+                  false
+                ]
+              },
+              {
+                "name": "e06",
+                "passed": false,
+                "weight": 1,
+                "judgeVotes": [
+                  false,
+                  false,
+                  true
+                ]
+              },
+              {
+                "name": "e07",
+                "passed": true,
+                "weight": 1,
+                "judgeVotes": [
+                  true,
+                  true,
+                  true
+                ]
+              },
+              {
+                "name": "e08",
+                "passed": true,
+                "weight": 1,
+                "judgeVotes": [
+                  true,
+                  true,
+                  true
+                ]
+              },
+              {
+                "name": "no-answer-key",
+                "passed": true,
+                "weight": 0.01
+              }
+            ]
+          },
+          {
+            "score": 0.6254681647940075,
+            "passed": false,
+            "turns": 9,
+            "costUsd": 0.7187878000000005,
+            "judgeCostUsd": 0.31376600000000043,
+            "durationSeconds": 150,
+            "error": null,
+            "graders": [
+              {
+                "name": "e01",
+                "passed": false,
+                "weight": 1,
+                "judgeVotes": [
+                  true,
+                  false,
+                  false
+                ]
+              },
+              {
+                "name": "e02",
+                "passed": true,
+                "weight": 1,
+                "judgeVotes": [
+                  true,
+                  true,
+                  true
+                ]
+              },
+              {
+                "name": "e03",
+                "passed": true,
+                "weight": 1,
+                "judgeVotes": [
+                  true,
+                  true,
+                  true
+                ]
+              },
+              {
+                "name": "e04",
+                "passed": true,
+                "weight": 1,
+                "judgeVotes": [
+                  true,
+                  true,
+                  true
+                ]
+              },
+              {
+                "name": "e05",
+                "passed": false,
+                "weight": 1,
+                "judgeVotes": [
+                  false,
+                  false,
+                  false
+                ]
+              },
+              {
+                "name": "e06",
+                "passed": false,
+                "weight": 1,
+                "judgeVotes": [
+                  false,
+                  false,
+                  false
+                ]
+              },
+              {
+                "name": "e07",
+                "passed": true,
+                "weight": 1,
+                "judgeVotes": [
+                  true,
+                  true,
+                  true
+                ]
+              },
+              {
+                "name": "e08",
+                "passed": true,
+                "weight": 1,
+                "judgeVotes": [
+                  true,
+                  true,
+                  true
+                ]
+              },
+              {
+                "name": "no-answer-key",
+                "passed": true,
+                "weight": 0.01
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "cut--podcast-clips",
+      "aggregates": {
+        "score": 0.8890737659456462,
+        "passRate": 0.3333333333333333,
+        "scoreWithout": 0.8336106489184693,
+        "passRateWithout": 0.3333333333333333,
+        "delta": 0.05546311702717699
+      },
+      "graders": [
+        {
+          "name": "e01",
+          "type": "llm",
+          "weight": 1
+        },
+        {
+          "name": "e02",
+          "type": "llm",
+          "weight": 1
+        },
+        {
+          "name": "e03",
+          "type": "llm",
+          "weight": 1
+        },
+        {
+          "name": "e04",
+          "type": "llm",
+          "weight": 1
+        },
+        {
+          "name": "e05",
+          "type": "llm",
+          "weight": 1
+        },
+        {
+          "name": "e06",
+          "type": "llm",
+          "weight": 1
+        },
+        {
+          "name": "no-answer-key",
+          "type": "regex",
+          "weight": 0.01
+        }
+      ],
+      "arms": {
+        "with": [
+          {
+            "score": 0.8336106489184693,
+            "passed": false,
+            "turns": 6,
+            "costUsd": 0.33728480000000044,
+            "judgeCostUsd": 0.12533200000000044,
+            "durationSeconds": 83,
+            "error": null,
+            "graders": [
+              {
+                "name": "e01",
+                "passed": false,
+                "weight": 1,
+                "judgeVotes": [
+                  false,
+                  false,
+                  true
+                ]
+              },
+              {
+                "name": "e02",
+                "passed": true,
+                "weight": 1,
+                "judgeVotes": [
+                  true,
+                  true,
+                  true
+                ]
+              },
+              {
+                "name": "e03",
+                "passed": true,
+                "weight": 1,
+                "judgeVotes": [
+                  true,
+                  true,
+                  true
+                ]
+              },
+              {
+                "name": "e04",
+                "passed": true,
+                "weight": 1,
+                "judgeVotes": [
+                  true,
+                  true,
+                  true
+                ]
+              },
+              {
+                "name": "e05",
+                "passed": true,
+                "weight": 1,
+                "judgeVotes": [
+                  true,
+                  true,
+                  true
+                ]
+              },
+              {
+                "name": "e06",
+                "passed": true,
+                "weight": 1,
+                "judgeVotes": [
+                  true,
+                  true,
+                  true
+                ]
+              },
+              {
+                "name": "no-answer-key",
+                "passed": true,
+                "weight": 0.01
+              }
+            ]
+          },
+          {
+            "score": 0.8336106489184693,
+            "passed": false,
+            "turns": 6,
+            "costUsd": 0.4677394000000006,
+            "judgeCostUsd": 0.24371000000000054,
+            "durationSeconds": 81,
+            "error": null,
+            "graders": [
+              {
+                "name": "e01",
+                "passed": false,
+                "weight": 1,
+                "judgeVotes": [
+                  false,
+                  false,
+                  false
+                ]
+              },
+              {
+                "name": "e02",
+                "passed": true,
+                "weight": 1,
+                "judgeVotes": [
+                  true,
+                  true,
+                  true
+                ]
+              },
+              {
+                "name": "e03",
+                "passed": true,
+                "weight": 1,
+                "judgeVotes": [
+                  true,
+                  true,
+                  true
+                ]
+              },
+              {
+                "name": "e04",
+                "passed": true,
+                "weight": 1,
+                "judgeVotes": [
+                  true,
+                  true,
+                  true
+                ]
+              },
+              {
+                "name": "e05",
+                "passed": true,
+                "weight": 1,
+                "judgeVotes": [
+                  true,
+                  true,
+                  true
+                ]
+              },
+              {
+                "name": "e06",
+                "passed": true,
+                "weight": 1,
+                "judgeVotes": [
+                  true,
+                  true,
+                  true
+                ]
+              },
+              {
+                "name": "no-answer-key",
+                "passed": true,
+                "weight": 0.01
+              }
+            ]
+          },
+          {
+            "score": 1,
+            "passed": true,
+            "turns": 7,
+            "costUsd": 0.3458894000000001,
+            "judgeCostUsd": 0.09447200000000011,
+            "durationSeconds": 87,
+            "error": null,
+            "graders": [
+              {
+                "name": "e01",
+                "passed": true,
+                "weight": 1,
+                "judgeVotes": [
+                  true,
+                  true,
+                  true
+                ]
+              },
+              {
+                "name": "e02",
+                "passed": true,
+                "weight": 1,
+                "judgeVotes": [
+                  true,
+                  true,
+                  true
+                ]
+              },
+              {
+                "name": "e03",
+                "passed": true,
+                "weight": 1,
+                "judgeVotes": [
+                  true,
+                  true,
+                  true
+                ]
+              },
+              {
+                "name": "e04",
+                "passed": true,
+                "weight": 1,
+                "judgeVotes": [
+                  true,
+                  true,
+                  true
+                ]
+              },
+              {
+                "name": "e05",
+                "passed": true,
+                "weight": 1,
+                "judgeVotes": [
+                  true,
+                  true,
+                  true
+                ]
+              },
+              {
+                "name": "e06",
+                "passed": true,
+                "weight": 1,
+                "judgeVotes": [
+                  true,
+                  true,
+                  true
+                ]
+              },
+              {
+                "name": "no-answer-key",
+                "passed": true,
+                "weight": 0.01
+              }
+            ]
+          }
+        ],
+        "without": [
+          {
+            "score": 0.6672212978369384,
+            "passed": false,
+            "turns": 4,
+            "costUsd": 0.30542100000000055,
+            "judgeCostUsd": 0.14576800000000056,
+            "durationSeconds": 67,
+            "error": null,
+            "graders": [
+              {
+                "name": "e01",
+                "passed": false,
+                "weight": 1,
+                "judgeVotes": [
+                  false,
+                  false,
+                  false
+                ]
+              },
+              {
+                "name": "e02",
+                "passed": true,
+                "weight": 1,
+                "judgeVotes": [
+                  true,
+                  true,
+                  true
+                ]
+              },
+              {
+                "name": "e03",
+                "passed": true,
+                "weight": 1,
+                "judgeVotes": [
+                  true,
+                  true,
+                  true
+                ]
+              },
+              {
+                "name": "e04",
+                "passed": false,
+                "weight": 1,
+                "judgeVotes": [
+                  true,
+                  false,
+                  false
+                ]
+              },
+              {
+                "name": "e05",
+                "passed": true,
+                "weight": 1,
+                "judgeVotes": [
+                  true,
+                  true,
+                  true
+                ]
+              },
+              {
+                "name": "e06",
+                "passed": true,
+                "weight": 1,
+                "judgeVotes": [
+                  true,
+                  true,
+                  true
+                ]
+              },
+              {
+                "name": "no-answer-key",
+                "passed": true,
+                "weight": 0.01
+              }
+            ]
+          },
+          {
+            "score": 0.8336106489184693,
+            "passed": false,
+            "turns": 4,
+            "costUsd": 0.2979462000000005,
+            "judgeCostUsd": 0.14323400000000053,
+            "durationSeconds": 85,
+            "error": null,
+            "graders": [
+              {
+                "name": "e01",
+                "passed": false,
+                "weight": 1,
+                "judgeVotes": [
+                  false,
+                  false,
+                  false
+                ]
+              },
+              {
+                "name": "e02",
+                "passed": true,
+                "weight": 1,
+                "judgeVotes": [
+                  true,
+                  true,
+                  true
+                ]
+              },
+              {
+                "name": "e03",
+                "passed": true,
+                "weight": 1,
+                "judgeVotes": [
+                  true,
+                  true,
+                  true
+                ]
+              },
+              {
+                "name": "e04",
+                "passed": true,
+                "weight": 1,
+                "judgeVotes": [
+                  true,
+                  true,
+                  true
+                ]
+              },
+              {
+                "name": "e05",
+                "passed": true,
+                "weight": 1,
+                "judgeVotes": [
+                  true,
+                  true,
+                  true
+                ]
+              },
+              {
+                "name": "e06",
+                "passed": true,
+                "weight": 1,
+                "judgeVotes": [
+                  true,
+                  true,
+                  true
+                ]
+              },
+              {
+                "name": "no-answer-key",
+                "passed": true,
+                "weight": 0.01
+              }
+            ]
+          },
+          {
+            "score": 1,
+            "passed": true,
+            "turns": 4,
+            "costUsd": 0.2904290000000007,
+            "judgeCostUsd": 0.12437000000000076,
+            "durationSeconds": 66,
+            "error": null,
+            "graders": [
+              {
+                "name": "e01",
+                "passed": true,
+                "weight": 1,
+                "judgeVotes": [
+                  true,
+                  true,
+                  true
+                ]
+              },
+              {
+                "name": "e02",
+                "passed": true,
+                "weight": 1,
+                "judgeVotes": [
+                  true,
+                  true,
+                  true
+                ]
+              },
+              {
+                "name": "e03",
+                "passed": true,
+                "weight": 1,
+                "judgeVotes": [
+                  true,
+                  true,
+                  true
+                ]
+              },
+              {
+                "name": "e04",
+                "passed": true,
+                "weight": 1,
+                "judgeVotes": [
+                  true,
+                  true,
+                  true
+                ]
+              },
+              {
+                "name": "e05",
+                "passed": true,
+                "weight": 1,
+                "judgeVotes": [
+                  true,
+                  true,
+                  true
+                ]
+              },
+              {
+                "name": "e06",
+                "passed": true,
+                "weight": 1,
+                "judgeVotes": [
+                  true,
+                  true,
+                  true
+                ]
+              },
+              {
+                "name": "no-answer-key",
+                "passed": true,
+                "weight": 0.01
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "cut--retime-captions-after-cut",
+      "aggregates": {
+        "score": 1,
+        "passRate": 1,
+        "scoreWithout": 0.8890122086570478,
+        "passRateWithout": 0,
+        "delta": 0.11098779134295222
+      },
+      "graders": [
+        {
+          "name": "e01",
+          "type": "llm",
+          "weight": 1
+        },
+        {
+          "name": "e02",
+          "type": "llm",
+          "weight": 1
+        },
+        {
+          "name": "e03",
+          "type": "llm",
+          "weight": 1
+        },
+        {
+          "name": "e04",
+          "type": "llm",
+          "weight": 1
+        },
+        {
+          "name": "e05",
+          "type": "llm",
+          "weight": 1
+        },
+        {
+          "name": "file01",
+          "type": "regex",
+          "weight": 1
+        },
+        {
+          "name": "file02",
+          "type": "regex",
+          "weight": 1
+        },
+        {
+          "name": "file03",
+          "type": "regex",
+          "weight": 1
+        },
+        {
+          "name": "file04",
+          "type": "regex",
+          "weight": 1
+        },
+        {
+          "name": "no-answer-key",
+          "type": "regex",
+          "weight": 0.01
+        }
+      ],
+      "arms": {
+        "with": [
+          {
+            "score": 1,
+            "passed": true,
+            "turns": 8,
+            "costUsd": 0.6346466000000013,
+            "judgeCostUsd": 0.38179600000000136,
+            "durationSeconds": 81,
+            "error": null,
+            "graders": [
+              {
+                "name": "e01",
+                "passed": true,
+                "weight": 1,
+                "judgeVotes": [
+                  true,
+                  true,
+                  true
+                ]
+              },
+              {
+                "name": "e02",
+                "passed": true,
+                "weight": 1,
+                "judgeVotes": [
+                  true,
+                  true,
+                  true
+                ]
+              },
+              {
+                "name": "e03",
+                "passed": true,
+                "weight": 1,
+                "judgeVotes": [
+                  true,
+                  true,
+                  true
+                ]
+              },
+              {
+                "name": "e04",
+                "passed": true,
+                "weight": 1,
+                "judgeVotes": [
+                  true,
+                  true,
+                  true
+                ]
+              },
+              {
+                "name": "e05",
+                "passed": true,
+                "weight": 1,
+                "judgeVotes": [
+                  true,
+                  true,
+                  true
+                ]
+              },
+              {
+                "name": "file01",
+                "passed": true,
+                "weight": 1
+              },
+              {
+                "name": "file02",
+                "passed": true,
+                "weight": 1
+              },
+              {
+                "name": "file03",
+                "passed": true,
+                "weight": 1
+              },
+              {
+                "name": "file04",
+                "passed": true,
+                "weight": 1
+              },
+              {
+                "name": "no-answer-key",
+                "passed": true,
+                "weight": 0.01
+              }
+            ]
+          },
+          {
+            "score": 1,
+            "passed": true,
+            "turns": 7,
+            "costUsd": 0.6356028000000012,
+            "judgeCostUsd": 0.4137980000000012,
+            "durationSeconds": 72,
+            "error": null,
+            "graders": [
+              {
+                "name": "e01",
+                "passed": true,
+                "weight": 1,
+                "judgeVotes": [
+                  true,
+                  true,
+                  true
+                ]
+              },
+              {
+                "name": "e02",
+                "passed": true,
+                "weight": 1,
+                "judgeVotes": [
+                  true,
+                  true,
+                  true
+                ]
+              },
+              {
+                "name": "e03",
+                "passed": true,
+                "weight": 1,
+                "judgeVotes": [
+                  true,
+                  true,
+                  true
+                ]
+              },
+              {
+                "name": "e04",
+                "passed": true,
+                "weight": 1,
+                "judgeVotes": [
+                  true,
+                  true,
+                  true
+                ]
+              },
+              {
+                "name": "e05",
+                "passed": true,
+                "weight": 1,
+                "judgeVotes": [
+                  true,
+                  true,
+                  true
+                ]
+              },
+              {
+                "name": "file01",
+                "passed": true,
+                "weight": 1
+              },
+              {
+                "name": "file02",
+                "passed": true,
+                "weight": 1
+              },
+              {
+                "name": "file03",
+                "passed": true,
+                "weight": 1
+              },
+              {
+                "name": "file04",
+                "passed": true,
+                "weight": 1
+              },
+              {
+                "name": "no-answer-key",
+                "passed": true,
+                "weight": 0.01
+              }
+            ]
+          },
+          {
+            "score": 1,
+            "passed": true,
+            "turns": 7,
+            "costUsd": 0.6193238000000008,
+            "judgeCostUsd": 0.3964320000000008,
+            "durationSeconds": 70,
+            "error": null,
+            "graders": [
+              {
+                "name": "e01",
+                "passed": true,
+                "weight": 1,
+                "judgeVotes": [
+                  true,
+                  true,
+                  true
+                ]
+              },
+              {
+                "name": "e02",
+                "passed": true,
+                "weight": 1,
+                "judgeVotes": [
+                  true,
+                  true,
+                  true
+                ]
+              },
+              {
+                "name": "e03",
+                "passed": true,
+                "weight": 1,
+                "judgeVotes": [
+                  true,
+                  true,
+                  true
+                ]
+              },
+              {
+                "name": "e04",
+                "passed": true,
+                "weight": 1,
+                "judgeVotes": [
+                  true,
+                  true,
+                  true
+                ]
+              },
+              {
+                "name": "e05",
+                "passed": true,
+                "weight": 1,
+                "judgeVotes": [
+                  true,
+                  true,
+                  true
+                ]
+              },
+              {
+                "name": "file01",
+                "passed": true,
+                "weight": 1
+              },
+              {
+                "name": "file02",
+                "passed": true,
+                "weight": 1
+              },
+              {
+                "name": "file03",
+                "passed": true,
+                "weight": 1
+              },
+              {
+                "name": "file04",
+                "passed": true,
+                "weight": 1
+              },
+              {
+                "name": "no-answer-key",
+                "passed": true,
+                "weight": 0.01
+              }
+            ]
+          }
+        ],
+        "without": [
+          {
+            "score": 0.8890122086570478,
+            "passed": false,
+            "turns": 4,
+            "costUsd": 0.5787500000000005,
+            "judgeCostUsd": 0.44414400000000054,
+            "durationSeconds": 51,
+            "error": null,
+            "graders": [
+              {
+                "name": "e01",
+                "passed": true,
+                "weight": 1,
+                "judgeVotes": [
+                  true,
+                  true,
+                  true
+                ]
+              },
+              {
+                "name": "e02",
+                "passed": true,
+                "weight": 1,
+                "judgeVotes": [
+                  true,
+                  true,
+                  true
+                ]
+              },
+              {
+                "name": "e03",
+                "passed": true,
+                "weight": 1,
+                "judgeVotes": [
+                  true,
+                  true,
+                  true
+                ]
+              },
+              {
+                "name": "e04",
+                "passed": false,
+                "weight": 1,
+                "judgeVotes": [
+                  false,
+                  false,
+                  false
+                ]
+              },
+              {
+                "name": "e05",
+                "passed": true,
+                "weight": 1,
+                "judgeVotes": [
+                  true,
+                  true,
+                  true
+                ]
+              },
+              {
+                "name": "file01",
+                "passed": true,
+                "weight": 1
+              },
+              {
+                "name": "file02",
+                "passed": true,
+                "weight": 1
+              },
+              {
+                "name": "file03",
+                "passed": true,
+                "weight": 1
+              },
+              {
+                "name": "file04",
+                "passed": true,
+                "weight": 1
+              },
+              {
+                "name": "no-answer-key",
+                "passed": true,
+                "weight": 0.01
+              }
+            ]
+          },
+          {
+            "score": 0.8890122086570478,
+            "passed": false,
+            "turns": 4,
+            "costUsd": 0.4042526000000011,
+            "judgeCostUsd": 0.27273400000000114,
+            "durationSeconds": 51,
+            "error": null,
+            "graders": [
+              {
+                "name": "e01",
+                "passed": true,
+                "weight": 1,
+                "judgeVotes": [
+                  true,
+                  true,
+                  true
+                ]
+              },
+              {
+                "name": "e02",
+                "passed": true,
+                "weight": 1,
+                "judgeVotes": [
+                  true,
+                  true,
+                  true
+                ]
+              },
+              {
+                "name": "e03",
+                "passed": true,
+                "weight": 1,
+                "judgeVotes": [
+                  true,
+                  true,
+                  true
+                ]
+              },
+              {
+                "name": "e04",
+                "passed": false,
+                "weight": 1,
+                "judgeVotes": [
+                  false,
+                  false,
+                  false
+                ]
+              },
+              {
+                "name": "e05",
+                "passed": true,
+                "weight": 1,
+                "judgeVotes": [
+                  true,
+                  true,
+                  true
+                ]
+              },
+              {
+                "name": "file01",
+                "passed": true,
+                "weight": 1
+              },
+              {
+                "name": "file02",
+                "passed": true,
+                "weight": 1
+              },
+              {
+                "name": "file03",
+                "passed": true,
+                "weight": 1
+              },
+              {
+                "name": "file04",
+                "passed": true,
+                "weight": 1
+              },
+              {
+                "name": "no-answer-key",
+                "passed": true,
+                "weight": 0.01
+              }
+            ]
+          },
+          {
+            "score": 0.8890122086570478,
+            "passed": false,
+            "turns": 4,
+            "costUsd": 0.3924888000000012,
+            "judgeCostUsd": 0.2590920000000012,
+            "durationSeconds": 47,
+            "error": null,
+            "graders": [
+              {
+                "name": "e01",
+                "passed": true,
+                "weight": 1,
+                "judgeVotes": [
+                  true,
+                  true,
+                  true
+                ]
+              },
+              {
+                "name": "e02",
+                "passed": true,
+                "weight": 1,
+                "judgeVotes": [
+                  true,
+                  true,
+                  true
+                ]
+              },
+              {
+                "name": "e03",
+                "passed": true,
+                "weight": 1,
+                "judgeVotes": [
+                  true,
+                  true,
+                  true
+                ]
+              },
+              {
+                "name": "e04",
+                "passed": false,
+                "weight": 1,
+                "judgeVotes": [
+                  false,
+                  false,
+                  false
+                ]
+              },
+              {
+                "name": "e05",
+                "passed": true,
+                "weight": 1,
+                "judgeVotes": [
+                  true,
+                  true,
+                  true
+                ]
+              },
+              {
+                "name": "file01",
+                "passed": true,
+                "weight": 1
+              },
+              {
+                "name": "file02",
+                "passed": true,
+                "weight": 1
+              },
+              {
+                "name": "file03",
+                "passed": true,
+                "weight": 1
+              },
+              {
+                "name": "file04",
+                "passed": true,
+                "weight": 1
+              },
+              {
+                "name": "no-answer-key",
+                "passed": true,
+                "weight": 0.01
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "cut--stream-copy-extra-second",
+      "aggregates": {
+        "score": 1,
+        "passRate": 1,
+        "scoreWithout": 1,
+        "passRateWithout": 1,
+        "delta": 0
+      },
+      "graders": [
+        {
+          "name": "e01",
+          "type": "llm",
+          "weight": 1
+        },
+        {
+          "name": "e02",
+          "type": "llm",
+          "weight": 1
+        },
+        {
+          "name": "e03",
+          "type": "llm",
+          "weight": 1
+        },
+        {
+          "name": "e04",
+          "type": "llm",
+          "weight": 1
+        },
+        {
+          "name": "e05",
+          "type": "llm",
+          "weight": 1
+        },
+        {
+          "name": "no-answer-key",
+          "type": "regex",
+          "weight": 0.01
+        }
+      ],
+      "arms": {
+        "with": [
+          {
+            "score": 1,
+            "passed": true,
+            "turns": 4,
+            "costUsd": 0.43415460000000217,
+            "judgeCostUsd": 0.28172600000000214,
+            "durationSeconds": 47,
+            "error": null,
+            "graders": [
+              {
+                "name": "e01",
+                "passed": true,
+                "weight": 1,
+                "judgeVotes": [
+                  true,
+                  true,
+                  true
+                ]
+              },
+              {
+                "name": "e02",
+                "passed": true,
+                "weight": 1,
+                "judgeVotes": [
+                  true,
+                  true,
+                  true
+                ]
+              },
+              {
+                "name": "e03",
+                "passed": true,
+                "weight": 1,
+                "judgeVotes": [
+                  true,
+                  true,
+                  true
+                ]
+              },
+              {
+                "name": "e04",
+                "passed": true,
+                "weight": 1,
+                "judgeVotes": [
+                  true,
+                  true,
+                  true
+                ]
+              },
+              {
+                "name": "e05",
+                "passed": true,
+                "weight": 1,
+                "judgeVotes": [
+                  true,
+                  true,
+                  true
+                ]
+              },
+              {
+                "name": "no-answer-key",
+                "passed": true,
+                "weight": 0.01
+              }
+            ]
+          },
+          {
+            "score": 1,
+            "passed": true,
+            "turns": 4,
+            "costUsd": 0.24098700000000103,
+            "judgeCostUsd": 0.08255800000000102,
+            "durationSeconds": 52,
+            "error": null,
+            "graders": [
+              {
+                "name": "e01",
+                "passed": true,
+                "weight": 1,
+                "judgeVotes": [
+                  true,
+                  true,
+                  true
+                ]
+              },
+              {
+                "name": "e02",
+                "passed": true,
+                "weight": 1,
+                "judgeVotes": [
+                  true,
+                  true,
+                  true
+                ]
+              },
+              {
+                "name": "e03",
+                "passed": true,
+                "weight": 1,
+                "judgeVotes": [
+                  true,
+                  true,
+                  true
+                ]
+              },
+              {
+                "name": "e04",
+                "passed": true,
+                "weight": 1,
+                "judgeVotes": [
+                  true,
+                  true,
+                  true
+                ]
+              },
+              {
+                "name": "e05",
+                "passed": true,
+                "weight": 1,
+                "judgeVotes": [
+                  true,
+                  true,
+                  true
+                ]
+              },
+              {
+                "name": "no-answer-key",
+                "passed": true,
+                "weight": 0.01
+              }
+            ]
+          },
+          {
+            "score": 1,
+            "passed": true,
+            "turns": 4,
+            "costUsd": 0.2990942000000005,
+            "judgeCostUsd": 0.13757200000000047,
+            "durationSeconds": 49,
+            "error": null,
+            "graders": [
+              {
+                "name": "e01",
+                "passed": true,
+                "weight": 1,
+                "judgeVotes": [
+                  true,
+                  true,
+                  true
+                ]
+              },
+              {
+                "name": "e02",
+                "passed": true,
+                "weight": 1,
+                "judgeVotes": [
+                  true,
+                  true,
+                  true
+                ]
+              },
+              {
+                "name": "e03",
+                "passed": true,
+                "weight": 1,
+                "judgeVotes": [
+                  true,
+                  true,
+                  true
+                ]
+              },
+              {
+                "name": "e04",
+                "passed": true,
+                "weight": 1,
+                "judgeVotes": [
+                  true,
+                  true,
+                  true
+                ]
+              },
+              {
+                "name": "e05",
+                "passed": true,
+                "weight": 1,
+                "judgeVotes": [
+                  true,
+                  true,
+                  true
+                ]
+              },
+              {
+                "name": "no-answer-key",
+                "passed": true,
+                "weight": 0.01
+              }
+            ]
+          }
+        ],
+        "without": [
+          {
+            "score": 1,
+            "passed": true,
+            "turns": 1,
+            "costUsd": 0.23185400000000042,
+            "judgeCostUsd": 0.12676000000000043,
+            "durationSeconds": 44,
+            "error": null,
+            "graders": [
+              {
+                "name": "e01",
+                "passed": true,
+                "weight": 1,
+                "judgeVotes": [
+                  true,
+                  true,
+                  true
+                ]
+              },
+              {
+                "name": "e02",
+                "passed": true,
+                "weight": 1,
+                "judgeVotes": [
+                  true,
+                  true,
+                  true
+                ]
+              },
+              {
+                "name": "e03",
+                "passed": true,
+                "weight": 1,
+                "judgeVotes": [
+                  true,
+                  true,
+                  true
+                ]
+              },
+              {
+                "name": "e04",
+                "passed": true,
+                "weight": 1,
+                "judgeVotes": [
+                  true,
+                  true,
+                  true
+                ]
+              },
+              {
+                "name": "e05",
+                "passed": true,
+                "weight": 1,
+                "judgeVotes": [
+                  true,
+                  true,
+                  true
+                ]
+              },
+              {
+                "name": "no-answer-key",
+                "passed": true,
+                "weight": 0.01
+              }
+            ]
+          },
+          {
+            "score": 1,
+            "passed": true,
+            "turns": 1,
+            "costUsd": 0.2523160000000001,
+            "judgeCostUsd": 0.15071000000000012,
+            "durationSeconds": 46,
+            "error": null,
+            "graders": [
+              {
+                "name": "e01",
+                "passed": true,
+                "weight": 1,
+                "judgeVotes": [
+                  true,
+                  true,
+                  true
+                ]
+              },
+              {
+                "name": "e02",
+                "passed": true,
+                "weight": 1,
+                "judgeVotes": [
+                  true,
+                  true,
+                  true
+                ]
+              },
+              {
+                "name": "e03",
+                "passed": true,
+                "weight": 1,
+                "judgeVotes": [
+                  true,
+                  true,
+                  true
+                ]
+              },
+              {
+                "name": "e04",
+                "passed": true,
+                "weight": 1,
+                "judgeVotes": [
+                  true,
+                  true,
+                  true
+                ]
+              },
+              {
+                "name": "e05",
+                "passed": true,
+                "weight": 1,
+                "judgeVotes": [
+                  true,
+                  true,
+                  true
+                ]
+              },
+              {
+                "name": "no-answer-key",
+                "passed": true,
+                "weight": 0.01
+              }
+            ]
+          },
+          {
+            "score": 1,
+            "passed": true,
+            "turns": 1,
+            "costUsd": 0.19297199999999948,
+            "judgeCostUsd": 0.08900599999999947,
+            "durationSeconds": 40,
+            "error": null,
+            "graders": [
+              {
+                "name": "e01",
+                "passed": true,
+                "weight": 1,
+                "judgeVotes": [
+                  true,
+                  true,
+                  true
+                ]
+              },
+              {
+                "name": "e02",
+                "passed": true,
+                "weight": 1,
+                "judgeVotes": [
+                  true,
+                  true,
+                  true
+                ]
+              },
+              {
+                "name": "e03",
+                "passed": true,
+                "weight": 1,
+                "judgeVotes": [
+                  true,
+                  true,
+                  true
+                ]
+              },
+              {
+                "name": "e04",
+                "passed": true,
+                "weight": 1,
+                "judgeVotes": [
+                  true,
+                  true,
+                  true
+                ]
+              },
+              {
+                "name": "e05",
+                "passed": true,
+                "weight": 1,
+                "judgeVotes": [
+                  true,
+                  true,
+                  true
+                ]
+              },
+              {
+                "name": "no-answer-key",
+                "passed": true,
+                "weight": 0.01
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "review--captions-drift-diagnosis",
+      "aggregates": {
+        "score": 1,
+        "passRate": 1,
+        "scoreWithout": 1,
+        "passRateWithout": 1,
+        "delta": 0
+      },
+      "graders": [
+        {
+          "name": "e01",
+          "type": "llm",
+          "weight": 1
+        },
+        {
+          "name": "e02",
+          "type": "llm",
+          "weight": 1
+        },
+        {
+          "name": "e03",
+          "type": "llm",
+          "weight": 1
+        },
+        {
+          "name": "e04",
+          "type": "llm",
+          "weight": 1
+        },
+        {
+          "name": "no-answer-key",
+          "type": "regex",
+          "weight": 0.01
+        }
+      ],
+      "arms": {
+        "with": [
+          {
+            "score": 1,
+            "passed": true,
+            "turns": 5,
+            "costUsd": 0.21963859999999996,
+            "judgeCostUsd": 0.07570999999999994,
+            "durationSeconds": 43,
+            "error": null,
+            "graders": [
+              {
+                "name": "e01",
+                "passed": true,
+                "weight": 1,
+                "judgeVotes": [
+                  true,
+                  true,
+                  true
+                ]
+              },
+              {
+                "name": "e02",
+                "passed": true,
+                "weight": 1,
+                "judgeVotes": [
+                  true,
+                  true,
+                  true
+                ]
+              },
+              {
+                "name": "e03",
+                "passed": true,
+                "weight": 1,
+                "judgeVotes": [
+                  true,
+                  true,
+                  true
+                ]
+              },
+              {
+                "name": "e04",
+                "passed": true,
+                "weight": 1,
+                "judgeVotes": [
+                  true,
+                  true,
+                  true
+                ]
+              },
+              {
+                "name": "no-answer-key",
+                "passed": true,
+                "weight": 0.01
+              }
+            ]
+          },
+          {
+            "score": 1,
+            "passed": true,
+            "turns": 5,
+            "costUsd": 0.25947879999999973,
+            "judgeCostUsd": 0.09841199999999972,
+            "durationSeconds": 47,
+            "error": null,
+            "graders": [
+              {
+                "name": "e01",
+                "passed": true,
+                "weight": 1,
+                "judgeVotes": [
+                  true,
+                  true,
+                  true
+                ]
+              },
+              {
+                "name": "e02",
+                "passed": true,
+                "weight": 1,
+                "judgeVotes": [
+                  true,
+                  true,
+                  true
+                ]
+              },
+              {
+                "name": "e03",
+                "passed": true,
+                "weight": 1,
+                "judgeVotes": [
+                  true,
+                  true,
+                  true
+                ]
+              },
+              {
+                "name": "e04",
+                "passed": true,
+                "weight": 1,
+                "judgeVotes": [
+                  true,
+                  true,
+                  true
+                ]
+              },
+              {
+                "name": "no-answer-key",
+                "passed": true,
+                "weight": 0.01
+              }
+            ]
+          },
+          {
+            "score": 1,
+            "passed": true,
+            "turns": 5,
+            "costUsd": 0.24441639999999962,
+            "judgeCostUsd": 0.0932959999999996,
+            "durationSeconds": 40,
+            "error": null,
+            "graders": [
+              {
+                "name": "e01",
+                "passed": true,
+                "weight": 1,
+                "judgeVotes": [
+                  true,
+                  true,
+                  true
+                ]
+              },
+              {
+                "name": "e02",
+                "passed": true,
+                "weight": 1,
+                "judgeVotes": [
+                  true,
+                  true,
+                  true
+                ]
+              },
+              {
+                "name": "e03",
+                "passed": true,
+                "weight": 1,
+                "judgeVotes": [
+                  true,
+                  true,
+                  true
+                ]
+              },
+              {
+                "name": "e04",
+                "passed": true,
+                "weight": 1,
+                "judgeVotes": [
+                  true,
+                  true,
+                  true
+                ]
+              },
+              {
+                "name": "no-answer-key",
+                "passed": true,
+                "weight": 0.01
+              }
+            ]
+          }
+        ],
+        "without": [
+          {
+            "score": 1,
+            "passed": true,
+            "turns": 3,
+            "costUsd": 0.18889839999999886,
+            "judgeCostUsd": 0.07268399999999886,
+            "durationSeconds": 39,
+            "error": null,
+            "graders": [
+              {
+                "name": "e01",
+                "passed": true,
+                "weight": 1,
+                "judgeVotes": [
+                  true,
+                  true,
+                  true
+                ]
+              },
+              {
+                "name": "e02",
+                "passed": true,
+                "weight": 1,
+                "judgeVotes": [
+                  true,
+                  true,
+                  true
+                ]
+              },
+              {
+                "name": "e03",
+                "passed": true,
+                "weight": 1,
+                "judgeVotes": [
+                  true,
+                  true,
+                  true
+                ]
+              },
+              {
+                "name": "e04",
+                "passed": true,
+                "weight": 1,
+                "judgeVotes": [
+                  true,
+                  true,
+                  true
+                ]
+              },
+              {
+                "name": "no-answer-key",
+                "passed": true,
+                "weight": 0.01
+              }
+            ]
+          },
+          {
+            "score": 1,
+            "passed": true,
+            "turns": 3,
+            "costUsd": 0.16793720000000095,
+            "judgeCostUsd": 0.05522800000000094,
+            "durationSeconds": 35,
+            "error": null,
+            "graders": [
+              {
+                "name": "e01",
+                "passed": true,
+                "weight": 1,
+                "judgeVotes": [
+                  true,
+                  true,
+                  true
+                ]
+              },
+              {
+                "name": "e02",
+                "passed": true,
+                "weight": 1,
+                "judgeVotes": [
+                  true,
+                  true,
+                  true
+                ]
+              },
+              {
+                "name": "e03",
+                "passed": true,
+                "weight": 1,
+                "judgeVotes": [
+                  true,
+                  true,
+                  true
+                ]
+              },
+              {
+                "name": "e04",
+                "passed": true,
+                "weight": 1,
+                "judgeVotes": [
+                  true,
+                  true,
+                  true
+                ]
+              },
+              {
+                "name": "no-answer-key",
+                "passed": true,
+                "weight": 0.01
+              }
+            ]
+          },
+          {
+            "score": 1,
+            "passed": true,
+            "turns": 3,
+            "costUsd": 0.174873200000001,
+            "judgeCostUsd": 0.06051200000000101,
+            "durationSeconds": 36,
+            "error": null,
+            "graders": [
+              {
+                "name": "e01",
+                "passed": true,
+                "weight": 1,
+                "judgeVotes": [
+                  true,
+                  true,
+                  true
+                ]
+              },
+              {
+                "name": "e02",
+                "passed": true,
+                "weight": 1,
+                "judgeVotes": [
+                  true,
+                  true,
+                  true
+                ]
+              },
+              {
+                "name": "e03",
+                "passed": true,
+                "weight": 1,
+                "judgeVotes": [
+                  true,
+                  true,
+                  true
+                ]
+              },
+              {
+                "name": "e04",
+                "passed": true,
+                "weight": 1,
+                "judgeVotes": [
+                  true,
+                  true,
+                  true
+                ]
+              },
+              {
+                "name": "no-answer-key",
+                "passed": true,
+                "weight": 0.01
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "review--handoff-to-another-agent",
+      "aggregates": {
+        "score": 0.9630040695523493,
+        "passRate": 0.6666666666666666,
+        "scoreWithout": 1,
+        "passRateWithout": 1,
+        "delta": -0.036995930447650704
+      },
+      "graders": [
+        {
+          "name": "e01",
+          "type": "llm",
+          "weight": 1
+        },
+        {
+          "name": "e02",
+          "type": "llm",
+          "weight": 1
+        },
+        {
+          "name": "e03",
+          "type": "llm",
+          "weight": 1
+        },
+        {
+          "name": "e04",
+          "type": "llm",
+          "weight": 1
+        },
+        {
+          "name": "e05",
+          "type": "llm",
+          "weight": 1
+        },
+        {
+          "name": "e06",
+          "type": "llm",
+          "weight": 1
+        },
+        {
+          "name": "file01",
+          "type": "regex",
+          "weight": 1
+        },
+        {
+          "name": "file02",
+          "type": "regex",
+          "weight": 1
+        },
+        {
+          "name": "file03",
+          "type": "regex",
+          "weight": 1
+        },
+        {
+          "name": "no-answer-key",
+          "type": "regex",
+          "weight": 0.01
+        }
+      ],
+      "arms": {
+        "with": [
+          {
+            "score": 1,
+            "passed": true,
+            "turns": 4,
+            "costUsd": 0.31539279999999964,
+            "judgeCostUsd": 0.17751799999999962,
+            "durationSeconds": 52,
+            "error": null,
+            "graders": [
+              {
+                "name": "e01",
+                "passed": true,
+                "weight": 1,
+                "judgeVotes": [
+                  true,
+                  true,
+                  true
+                ]
+              },
+              {
+                "name": "e02",
+                "passed": true,
+                "weight": 1,
+                "judgeVotes": [
+                  true,
+                  true,
+                  true
+                ]
+              },
+              {
+                "name": "e03",
+                "passed": true,
+                "weight": 1,
+                "judgeVotes": [
+                  true,
+                  true,
+                  true
+                ]
+              },
+              {
+                "name": "e04",
+                "passed": true,
+                "weight": 1,
+                "judgeVotes": [
+                  true,
+                  true,
+                  true
+                ]
+              },
+              {
+                "name": "e05",
+                "passed": true,
+                "weight": 1,
+                "judgeVotes": [
+                  true,
+                  true,
+                  true
+                ]
+              },
+              {
+                "name": "e06",
+                "passed": true,
+                "weight": 1,
+                "judgeVotes": [
+                  true,
+                  true,
+                  true
+                ]
+              },
+              {
+                "name": "file01",
+                "passed": true,
+                "weight": 1
+              },
+              {
+                "name": "file02",
+                "passed": true,
+                "weight": 1
+              },
+              {
+                "name": "file03",
+                "passed": true,
+                "weight": 1
+              },
+              {
+                "name": "no-answer-key",
+                "passed": true,
+                "weight": 0.01
+              }
+            ]
+          },
+          {
+            "score": 1,
+            "passed": true,
+            "turns": 7,
+            "costUsd": 0.44392600000000004,
+            "judgeCostUsd": 0.2662960000000001,
+            "durationSeconds": 57,
+            "error": null,
+            "graders": [
+              {
+                "name": "e01",
+                "passed": true,
+                "weight": 1,
+                "judgeVotes": [
+                  true,
+                  true,
+                  true
+                ]
+              },
+              {
+                "name": "e02",
+                "passed": true,
+                "weight": 1,
+                "judgeVotes": [
+                  true,
+                  true,
+                  true
+                ]
+              },
+              {
+                "name": "e03",
+                "passed": true,
+                "weight": 1,
+                "judgeVotes": [
+                  true,
+                  true,
+                  true
+                ]
+              },
+              {
+                "name": "e04",
+                "passed": true,
+                "weight": 1,
+                "judgeVotes": [
+                  true,
+                  true,
+                  true
+                ]
+              },
+              {
+                "name": "e05",
+                "passed": true,
+                "weight": 1,
+                "judgeVotes": [
+                  true,
+                  true,
+                  true
+                ]
+              },
+              {
+                "name": "e06",
+                "passed": true,
+                "weight": 1,
+                "judgeVotes": [
+                  true,
+                  true,
+                  true
+                ]
+              },
+              {
+                "name": "file01",
+                "passed": true,
+                "weight": 1
+              },
+              {
+                "name": "file02",
+                "passed": true,
+                "weight": 1
+              },
+              {
+                "name": "file03",
+                "passed": true,
+                "weight": 1
+              },
+              {
+                "name": "no-answer-key",
+                "passed": true,
+                "weight": 0.01
+              }
+            ]
+          },
+          {
+            "score": 0.8890122086570478,
+            "passed": false,
+            "turns": 6,
+            "costUsd": 0.6106361999999991,
+            "judgeCostUsd": 0.43049399999999904,
+            "durationSeconds": 72,
+            "error": null,
+            "graders": [
+              {
+                "name": "e01",
+                "passed": false,
+                "weight": 1,
+                "judgeVotes": [
+                  false,
+                  false,
+                  false
+                ]
+              },
+              {
+                "name": "e02",
+                "passed": true,
+                "weight": 1,
+                "judgeVotes": [
+                  true,
+                  true,
+                  true
+                ]
+              },
+              {
+                "name": "e03",
+                "passed": true,
+                "weight": 1,
+                "judgeVotes": [
+                  true,
+                  true,
+                  true
+                ]
+              },
+              {
+                "name": "e04",
+                "passed": true,
+                "weight": 1,
+                "judgeVotes": [
+                  true,
+                  true,
+                  true
+                ]
+              },
+              {
+                "name": "e05",
+                "passed": true,
+                "weight": 1,
+                "judgeVotes": [
+                  true,
+                  true,
+                  true
+                ]
+              },
+              {
+                "name": "e06",
+                "passed": true,
+                "weight": 1,
+                "judgeVotes": [
+                  true,
+                  true,
+                  true
+                ]
+              },
+              {
+                "name": "file01",
+                "passed": true,
+                "weight": 1
+              },
+              {
+                "name": "file02",
+                "passed": true,
+                "weight": 1
+              },
+              {
+                "name": "file03",
+                "passed": true,
+                "weight": 1
+              },
+              {
+                "name": "no-answer-key",
+                "passed": true,
+                "weight": 0.01
+              }
+            ]
+          }
+        ],
+        "without": [
+          {
+            "score": 1,
+            "passed": true,
+            "turns": 4,
+            "costUsd": 0.44074999999999975,
+            "judgeCostUsd": 0.3087839999999997,
+            "durationSeconds": 54,
+            "error": null,
+            "graders": [
+              {
+                "name": "e01",
+                "passed": true,
+                "weight": 1,
+                "judgeVotes": [
+                  true,
+                  true,
+                  true
+                ]
+              },
+              {
+                "name": "e02",
+                "passed": true,
+                "weight": 1,
+                "judgeVotes": [
+                  true,
+                  true,
+                  true
+                ]
+              },
+              {
+                "name": "e03",
+                "passed": true,
+                "weight": 1,
+                "judgeVotes": [
+                  true,
+                  true,
+                  true
+                ]
+              },
+              {
+                "name": "e04",
+                "passed": true,
+                "weight": 1,
+                "judgeVotes": [
+                  true,
+                  true,
+                  true
+                ]
+              },
+              {
+                "name": "e05",
+                "passed": true,
+                "weight": 1,
+                "judgeVotes": [
+                  true,
+                  true,
+                  true
+                ]
+              },
+              {
+                "name": "e06",
+                "passed": true,
+                "weight": 1,
+                "judgeVotes": [
+                  true,
+                  true,
+                  true
+                ]
+              },
+              {
+                "name": "file01",
+                "passed": true,
+                "weight": 1
+              },
+              {
+                "name": "file02",
+                "passed": true,
+                "weight": 1
+              },
+              {
+                "name": "file03",
+                "passed": true,
+                "weight": 1
+              },
+              {
+                "name": "no-answer-key",
+                "passed": true,
+                "weight": 0.01
+              }
+            ]
+          },
+          {
+            "score": 1,
+            "passed": true,
+            "turns": 4,
+            "costUsd": 0.5824442000000014,
+            "judgeCostUsd": 0.45230600000000143,
+            "durationSeconds": 57,
+            "error": null,
+            "graders": [
+              {
+                "name": "e01",
+                "passed": true,
+                "weight": 1,
+                "judgeVotes": [
+                  true,
+                  true,
+                  true
+                ]
+              },
+              {
+                "name": "e02",
+                "passed": true,
+                "weight": 1,
+                "judgeVotes": [
+                  true,
+                  true,
+                  true
+                ]
+              },
+              {
+                "name": "e03",
+                "passed": true,
+                "weight": 1,
+                "judgeVotes": [
+                  true,
+                  true,
+                  true
+                ]
+              },
+              {
+                "name": "e04",
+                "passed": true,
+                "weight": 1,
+                "judgeVotes": [
+                  true,
+                  true,
+                  true
+                ]
+              },
+              {
+                "name": "e05",
+                "passed": true,
+                "weight": 1,
+                "judgeVotes": [
+                  true,
+                  true,
+                  true
+                ]
+              },
+              {
+                "name": "e06",
+                "passed": true,
+                "weight": 1,
+                "judgeVotes": [
+                  true,
+                  true,
+                  true
+                ]
+              },
+              {
+                "name": "file01",
+                "passed": true,
+                "weight": 1
+              },
+              {
+                "name": "file02",
+                "passed": true,
+                "weight": 1
+              },
+              {
+                "name": "file03",
+                "passed": true,
+                "weight": 1
+              },
+              {
+                "name": "no-answer-key",
+                "passed": true,
+                "weight": 0.01
+              }
+            ]
+          },
+          {
+            "score": 1,
+            "passed": true,
+            "turns": 4,
+            "costUsd": 0.6041456000000014,
+            "judgeCostUsd": 0.47043800000000147,
+            "durationSeconds": 48,
+            "error": null,
+            "graders": [
+              {
+                "name": "e01",
+                "passed": true,
+                "weight": 1,
+                "judgeVotes": [
+                  true,
+                  true,
+                  true
+                ]
+              },
+              {
+                "name": "e02",
+                "passed": true,
+                "weight": 1,
+                "judgeVotes": [
+                  true,
+                  true,
+                  true
+                ]
+              },
+              {
+                "name": "e03",
+                "passed": true,
+                "weight": 1,
+                "judgeVotes": [
+                  true,
+                  true,
+                  true
+                ]
+              },
+              {
+                "name": "e04",
+                "passed": true,
+                "weight": 1,
+                "judgeVotes": [
+                  true,
+                  true,
+                  true
+                ]
+              },
+              {
+                "name": "e05",
+                "passed": true,
+                "weight": 1,
+                "judgeVotes": [
+                  true,
+                  true,
+                  true
+                ]
+              },
+              {
+                "name": "e06",
+                "passed": true,
+                "weight": 1,
+                "judgeVotes": [
+                  true,
+                  true,
+                  true
+                ]
+              },
+              {
+                "name": "file01",
+                "passed": true,
+                "weight": 1
+              },
+              {
+                "name": "file02",
+                "passed": true,
+                "weight": 1
+              },
+              {
+                "name": "file03",
+                "passed": true,
+                "weight": 1
+              },
+              {
+                "name": "no-answer-key",
+                "passed": true,
+                "weight": 0.01
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "review--review-before-publish",
+      "aggregates": {
+        "score": 1,
+        "passRate": 1,
+        "scoreWithout": 0.8751560549313359,
+        "passRateWithout": 0,
+        "delta": 0.12484394506866414
+      },
+      "graders": [
+        {
+          "name": "e01",
+          "type": "llm",
+          "weight": 1
+        },
+        {
+          "name": "e02",
+          "type": "llm",
+          "weight": 1
+        },
+        {
+          "name": "e03",
+          "type": "llm",
+          "weight": 1
+        },
+        {
+          "name": "e04",
+          "type": "llm",
+          "weight": 1
+        },
+        {
+          "name": "e05",
+          "type": "llm",
+          "weight": 1
+        },
+        {
+          "name": "e06",
+          "type": "llm",
+          "weight": 1
+        },
+        {
+          "name": "e07",
+          "type": "llm",
+          "weight": 1
+        },
+        {
+          "name": "e08",
+          "type": "llm",
+          "weight": 1
+        },
+        {
+          "name": "no-answer-key",
+          "type": "regex",
+          "weight": 0.01
+        }
+      ],
+      "arms": {
+        "with": [
+          {
+            "score": 1,
+            "passed": true,
+            "turns": 14,
+            "costUsd": 0.5789219999999973,
+            "judgeCostUsd": 0.22005599999999736,
+            "durationSeconds": 119,
+            "error": null,
+            "graders": [
+              {
+                "name": "e01",
+                "passed": true,
+                "weight": 1,
+                "judgeVotes": [
+                  true,
+                  true,
+                  true
+                ]
+              },
+              {
+                "name": "e02",
+                "passed": true,
+                "weight": 1,
+                "judgeVotes": [
+                  true,
+                  true,
+                  true
+                ]
+              },
+              {
+                "name": "e03",
+                "passed": true,
+                "weight": 1,
+                "judgeVotes": [
+                  true,
+                  true,
+                  true
+                ]
+              },
+              {
+                "name": "e04",
+                "passed": true,
+                "weight": 1,
+                "judgeVotes": [
+                  true,
+                  true,
+                  true
+                ]
+              },
+              {
+                "name": "e05",
+                "passed": true,
+                "weight": 1,
+                "judgeVotes": [
+                  true,
+                  true,
+                  true
+                ]
+              },
+              {
+                "name": "e06",
+                "passed": true,
+                "weight": 1,
+                "judgeVotes": [
+                  true,
+                  true,
+                  true
+                ]
+              },
+              {
+                "name": "e07",
+                "passed": true,
+                "weight": 1,
+                "judgeVotes": [
+                  false,
+                  true,
+                  true
+                ]
+              },
+              {
+                "name": "e08",
+                "passed": true,
+                "weight": 1,
+                "judgeVotes": [
+                  true,
+                  true,
+                  true
+                ]
+              },
+              {
+                "name": "no-answer-key",
+                "passed": true,
+                "weight": 0.01
+              }
+            ]
+          },
+          {
+            "score": 1,
+            "passed": true,
+            "turns": 8,
+            "costUsd": 0.4261163999999992,
+            "judgeCostUsd": 0.19875999999999916,
+            "durationSeconds": 76,
+            "error": null,
+            "graders": [
+              {
+                "name": "e01",
+                "passed": true,
+                "weight": 1,
+                "judgeVotes": [
+                  true,
+                  true,
+                  true
+                ]
+              },
+              {
+                "name": "e02",
+                "passed": true,
+                "weight": 1,
+                "judgeVotes": [
+                  true,
+                  true,
+                  true
+                ]
+              },
+              {
+                "name": "e03",
+                "passed": true,
+                "weight": 1,
+                "judgeVotes": [
+                  true,
+                  true,
+                  true
+                ]
+              },
+              {
+                "name": "e04",
+                "passed": true,
+                "weight": 1,
+                "judgeVotes": [
+                  true,
+                  true,
+                  true
+                ]
+              },
+              {
+                "name": "e05",
+                "passed": true,
+                "weight": 1,
+                "judgeVotes": [
+                  true,
+                  true,
+                  true
+                ]
+              },
+              {
+                "name": "e06",
+                "passed": true,
+                "weight": 1,
+                "judgeVotes": [
+                  true,
+                  true,
+                  true
+                ]
+              },
+              {
+                "name": "e07",
+                "passed": true,
+                "weight": 1,
+                "judgeVotes": [
+                  true,
+                  true,
+                  true
+                ]
+              },
+              {
+                "name": "e08",
+                "passed": true,
+                "weight": 1,
+                "judgeVotes": [
+                  true,
+                  true,
+                  true
+                ]
+              },
+              {
+                "name": "no-answer-key",
+                "passed": true,
+                "weight": 0.01
+              }
+            ]
+          },
+          {
+            "score": 1,
+            "passed": true,
+            "turns": 7,
+            "costUsd": 0.44524999999999837,
+            "judgeCostUsd": 0.22332599999999836,
+            "durationSeconds": 74,
+            "error": null,
+            "graders": [
+              {
+                "name": "e01",
+                "passed": true,
+                "weight": 1,
+                "judgeVotes": [
+                  true,
+                  true,
+                  true
+                ]
+              },
+              {
+                "name": "e02",
+                "passed": true,
+                "weight": 1,
+                "judgeVotes": [
+                  true,
+                  true,
+                  true
+                ]
+              },
+              {
+                "name": "e03",
+                "passed": true,
+                "weight": 1,
+                "judgeVotes": [
+                  true,
+                  true,
+                  true
+                ]
+              },
+              {
+                "name": "e04",
+                "passed": true,
+                "weight": 1,
+                "judgeVotes": [
+                  true,
+                  true,
+                  true
+                ]
+              },
+              {
+                "name": "e05",
+                "passed": true,
+                "weight": 1,
+                "judgeVotes": [
+                  true,
+                  true,
+                  true
+                ]
+              },
+              {
+                "name": "e06",
+                "passed": true,
+                "weight": 1,
+                "judgeVotes": [
+                  true,
+                  true,
+                  true
+                ]
+              },
+              {
+                "name": "e07",
+                "passed": true,
+                "weight": 1,
+                "judgeVotes": [
+                  true,
+                  true,
+                  true
+                ]
+              },
+              {
+                "name": "e08",
+                "passed": true,
+                "weight": 1,
+                "judgeVotes": [
+                  true,
+                  true,
+                  true
+                ]
+              },
+              {
+                "name": "no-answer-key",
+                "passed": true,
+                "weight": 0.01
+              }
+            ]
+          }
+        ],
+        "without": [
+          {
+            "score": 0.8751560549313359,
+            "passed": false,
+            "turns": 11,
+            "costUsd": 0.46418339999999647,
+            "judgeCostUsd": 0.22000199999999648,
+            "durationSeconds": 85,
+            "error": null,
+            "graders": [
+              {
+                "name": "e01",
+                "passed": true,
+                "weight": 1,
+                "judgeVotes": [
+                  true,
+                  true,
+                  true
+                ]
+              },
+              {
+                "name": "e02",
+                "passed": true,
+                "weight": 1,
+                "judgeVotes": [
+                  true,
+                  true,
+                  true
+                ]
+              },
+              {
+                "name": "e03",
+                "passed": true,
+                "weight": 1,
+                "judgeVotes": [
+                  true,
+                  true,
+                  true
+                ]
+              },
+              {
+                "name": "e04",
+                "passed": true,
+                "weight": 1,
+                "judgeVotes": [
+                  true,
+                  true,
+                  true
+                ]
+              },
+              {
+                "name": "e05",
+                "passed": true,
+                "weight": 1,
+                "judgeVotes": [
+                  true,
+                  true,
+                  true
+                ]
+              },
+              {
+                "name": "e06",
+                "passed": true,
+                "weight": 1,
+                "judgeVotes": [
+                  true,
+                  true,
+                  true
+                ]
+              },
+              {
+                "name": "e07",
+                "passed": false,
+                "weight": 1,
+                "judgeVotes": [
+                  false,
+                  false,
+                  false
+                ]
+              },
+              {
+                "name": "e08",
+                "passed": true,
+                "weight": 1,
+                "judgeVotes": [
+                  true,
+                  true,
+                  true
+                ]
+              },
+              {
+                "name": "no-answer-key",
+                "passed": true,
+                "weight": 0.01
+              }
+            ]
+          },
+          {
+            "score": 0.8751560549313359,
+            "passed": false,
+            "turns": 8,
+            "costUsd": 0.322011000000002,
+            "judgeCostUsd": 0.13319200000000198,
+            "durationSeconds": 75,
+            "error": null,
+            "graders": [
+              {
+                "name": "e01",
+                "passed": true,
+                "weight": 1,
+                "judgeVotes": [
+                  true,
+                  true,
+                  true
+                ]
+              },
+              {
+                "name": "e02",
+                "passed": true,
+                "weight": 1,
+                "judgeVotes": [
+                  true,
+                  true,
+                  true
+                ]
+              },
+              {
+                "name": "e03",
+                "passed": true,
+                "weight": 1,
+                "judgeVotes": [
+                  true,
+                  true,
+                  true
+                ]
+              },
+              {
+                "name": "e04",
+                "passed": true,
+                "weight": 1,
+                "judgeVotes": [
+                  true,
+                  true,
+                  true
+                ]
+              },
+              {
+                "name": "e05",
+                "passed": true,
+                "weight": 1,
+                "judgeVotes": [
+                  true,
+                  true,
+                  true
+                ]
+              },
+              {
+                "name": "e06",
+                "passed": true,
+                "weight": 1,
+                "judgeVotes": [
+                  true,
+                  true,
+                  true
+                ]
+              },
+              {
+                "name": "e07",
+                "passed": false,
+                "weight": 1,
+                "judgeVotes": [
+                  false,
+                  false,
+                  false
+                ]
+              },
+              {
+                "name": "e08",
+                "passed": true,
+                "weight": 1,
+                "judgeVotes": [
+                  true,
+                  true,
+                  true
+                ]
+              },
+              {
+                "name": "no-answer-key",
+                "passed": true,
+                "weight": 0.01
+              }
+            ]
+          },
+          {
+            "score": 0.8751560549313359,
+            "passed": false,
+            "turns": 10,
+            "costUsd": 0.33936120000000225,
+            "judgeCostUsd": 0.14449800000000224,
+            "durationSeconds": 88,
+            "error": null,
+            "graders": [
+              {
+                "name": "e01",
+                "passed": true,
+                "weight": 1,
+                "judgeVotes": [
+                  true,
+                  true,
+                  true
+                ]
+              },
+              {
+                "name": "e02",
+                "passed": true,
+                "weight": 1,
+                "judgeVotes": [
+                  true,
+                  true,
+                  true
+                ]
+              },
+              {
+                "name": "e03",
+                "passed": true,
+                "weight": 1,
+                "judgeVotes": [
+                  true,
+                  true,
+                  true
+                ]
+              },
+              {
+                "name": "e04",
+                "passed": true,
+                "weight": 1,
+                "judgeVotes": [
+                  true,
+                  true,
+                  true
+                ]
+              },
+              {
+                "name": "e05",
+                "passed": true,
+                "weight": 1,
+                "judgeVotes": [
+                  true,
+                  true,
+                  true
+                ]
+              },
+              {
+                "name": "e06",
+                "passed": true,
+                "weight": 1,
+                "judgeVotes": [
+                  true,
+                  true,
+                  true
+                ]
+              },
+              {
+                "name": "e07",
+                "passed": false,
+                "weight": 1,
+                "judgeVotes": [
+                  false,
+                  false,
+                  false
+                ]
+              },
+              {
+                "name": "e08",
+                "passed": true,
+                "weight": 1,
+                "judgeVotes": [
+                  true,
+                  true,
+                  true
+                ]
+              },
+              {
+                "name": "no-answer-key",
+                "passed": true,
+                "weight": 0.01
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "review--youtube-loudness",
+      "aggregates": {
+        "score": 0.9334664005322688,
+        "passRate": 0.6666666666666666,
+        "scoreWithout": 0.5342648037258816,
+        "passRateWithout": 0,
+        "delta": 0.3992015968063872
+      },
+      "graders": [
+        {
+          "name": "e01",
+          "type": "llm",
+          "weight": 1
+        },
+        {
+          "name": "e02",
+          "type": "llm",
+          "weight": 1
+        },
+        {
+          "name": "e03",
+          "type": "llm",
+          "weight": 1
+        },
+        {
+          "name": "e04",
+          "type": "llm",
+          "weight": 1
+        },
+        {
+          "name": "e05",
+          "type": "llm",
+          "weight": 1
+        },
+        {
+          "name": "no-answer-key",
+          "type": "regex",
+          "weight": 0.01
+        }
+      ],
+      "arms": {
+        "with": [
+          {
+            "score": 1,
+            "passed": true,
+            "turns": 5,
+            "costUsd": 0.2949088000000027,
+            "judgeCostUsd": 0.14031400000000271,
+            "durationSeconds": 62,
+            "error": null,
+            "graders": [
+              {
+                "name": "e01",
+                "passed": true,
+                "weight": 1,
+                "judgeVotes": [
+                  true,
+                  true,
+                  true
+                ]
+              },
+              {
+                "name": "e02",
+                "passed": true,
+                "weight": 1,
+                "judgeVotes": [
+                  true,
+                  true,
+                  true
+                ]
+              },
+              {
+                "name": "e03",
+                "passed": true,
+                "weight": 1,
+                "judgeVotes": [
+                  true,
+                  true,
+                  true
+                ]
+              },
+              {
+                "name": "e04",
+                "passed": true,
+                "weight": 1,
+                "judgeVotes": [
+                  true,
+                  true,
+                  true
+                ]
+              },
+              {
+                "name": "e05",
+                "passed": true,
+                "weight": 1,
+                "judgeVotes": [
+                  true,
+                  true,
+                  true
+                ]
+              },
+              {
+                "name": "no-answer-key",
+                "passed": true,
+                "weight": 0.01
+              }
+            ]
+          },
+          {
+            "score": 0.8003992015968063,
+            "passed": false,
+            "turns": 6,
+            "costUsd": 0.30926240000000255,
+            "judgeCostUsd": 0.13879400000000253,
+            "durationSeconds": 55,
+            "error": null,
+            "graders": [
+              {
+                "name": "e01",
+                "passed": true,
+                "weight": 1,
+                "judgeVotes": [
+                  true,
+                  true,
+                  true
+                ]
+              },
+              {
+                "name": "e02",
+                "passed": true,
+                "weight": 1,
+                "judgeVotes": [
+                  true,
+                  true,
+                  true
+                ]
+              },
+              {
+                "name": "e03",
+                "passed": true,
+                "weight": 1,
+                "judgeVotes": [
+                  true,
+                  true,
+                  true
+                ]
+              },
+              {
+                "name": "e04",
+                "passed": false,
+                "weight": 1,
+                "judgeVotes": [
+                  false,
+                  false,
+                  false
+                ]
+              },
+              {
+                "name": "e05",
+                "passed": true,
+                "weight": 1,
+                "judgeVotes": [
+                  true,
+                  true,
+                  true
+                ]
+              },
+              {
+                "name": "no-answer-key",
+                "passed": true,
+                "weight": 0.01
+              }
+            ]
+          },
+          {
+            "score": 1,
+            "passed": true,
+            "turns": 6,
+            "costUsd": 0.2910276000000025,
+            "judgeCostUsd": 0.10539600000000249,
+            "durationSeconds": 55,
+            "error": null,
+            "graders": [
+              {
+                "name": "e01",
+                "passed": true,
+                "weight": 1,
+                "judgeVotes": [
+                  true,
+                  true,
+                  true
+                ]
+              },
+              {
+                "name": "e02",
+                "passed": true,
+                "weight": 1,
+                "judgeVotes": [
+                  true,
+                  true,
+                  true
+                ]
+              },
+              {
+                "name": "e03",
+                "passed": true,
+                "weight": 1,
+                "judgeVotes": [
+                  true,
+                  true,
+                  true
+                ]
+              },
+              {
+                "name": "e04",
+                "passed": true,
+                "weight": 1,
+                "judgeVotes": [
+                  true,
+                  false,
+                  true
+                ]
+              },
+              {
+                "name": "e05",
+                "passed": true,
+                "weight": 1,
+                "judgeVotes": [
+                  true,
+                  true,
+                  true
+                ]
+              },
+              {
+                "name": "no-answer-key",
+                "passed": true,
+                "weight": 0.01
+              }
+            ]
+          }
+        ],
+        "without": [
+          {
+            "score": 0.6007984031936128,
+            "passed": false,
+            "turns": 3,
+            "costUsd": 0.20868340000000118,
+            "judgeCostUsd": 0.0998840000000012,
+            "durationSeconds": 45,
+            "error": null,
+            "graders": [
+              {
+                "name": "e01",
+                "passed": true,
+                "weight": 1,
+                "judgeVotes": [
+                  true,
+                  true,
+                  true
+                ]
+              },
+              {
+                "name": "e02",
+                "passed": false,
+                "weight": 1,
+                "judgeVotes": [
+                  false,
+                  false,
+                  false
+                ]
+              },
+              {
+                "name": "e03",
+                "passed": false,
+                "weight": 1,
+                "judgeVotes": [
+                  false,
+                  false,
+                  false
+                ]
+              },
+              {
+                "name": "e04",
+                "passed": true,
+                "weight": 1,
+                "judgeVotes": [
+                  true,
+                  true,
+                  true
+                ]
+              },
+              {
+                "name": "e05",
+                "passed": true,
+                "weight": 1,
+                "judgeVotes": [
+                  true,
+                  true,
+                  true
+                ]
+              },
+              {
+                "name": "no-answer-key",
+                "passed": true,
+                "weight": 0.01
+              }
+            ]
+          },
+          {
+            "score": 0.40119760479041916,
+            "passed": false,
+            "turns": 3,
+            "costUsd": 0.232993200000002,
+            "judgeCostUsd": 0.12769600000000203,
+            "durationSeconds": 54,
+            "error": null,
+            "graders": [
+              {
+                "name": "e01",
+                "passed": true,
+                "weight": 1,
+                "judgeVotes": [
+                  true,
+                  true,
+                  true
+                ]
+              },
+              {
+                "name": "e02",
+                "passed": false,
+                "weight": 1,
+                "judgeVotes": [
+                  false,
+                  false,
+                  false
+                ]
+              },
+              {
+                "name": "e03",
+                "passed": false,
+                "weight": 1,
+                "judgeVotes": [
+                  false,
+                  false,
+                  false
+                ]
+              },
+              {
+                "name": "e04",
+                "passed": false,
+                "weight": 1,
+                "judgeVotes": [
+                  false,
+                  false,
+                  false
+                ]
+              },
+              {
+                "name": "e05",
+                "passed": true,
+                "weight": 1,
+                "judgeVotes": [
+                  true,
+                  true,
+                  true
+                ]
+              },
+              {
+                "name": "no-answer-key",
+                "passed": true,
+                "weight": 0.01
+              }
+            ]
+          },
+          {
+            "score": 0.6007984031936128,
+            "passed": false,
+            "turns": 3,
+            "costUsd": 0.2136980000000022,
+            "judgeCostUsd": 0.1027760000000022,
+            "durationSeconds": 44,
+            "error": null,
+            "graders": [
+              {
+                "name": "e01",
+                "passed": true,
+                "weight": 1,
+                "judgeVotes": [
+                  true,
+                  true,
+                  true
+                ]
+              },
+              {
+                "name": "e02",
+                "passed": false,
+                "weight": 1,
+                "judgeVotes": [
+                  false,
+                  false,
+                  false
+                ]
+              },
+              {
+                "name": "e03",
+                "passed": false,
+                "weight": 1,
+                "judgeVotes": [
+                  false,
+                  false,
+                  false
+                ]
+              },
+              {
+                "name": "e04",
+                "passed": true,
+                "weight": 1,
+                "judgeVotes": [
+                  true,
+                  true,
+                  true
+                ]
+              },
+              {
+                "name": "e05",
+                "passed": true,
+                "weight": 1,
+                "judgeVotes": [
+                  true,
+                  true,
+                  true
+                ]
+              },
+              {
+                "name": "no-answer-key",
+                "passed": true,
+                "weight": 0.01
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

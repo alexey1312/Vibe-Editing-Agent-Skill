@@ -34,7 +34,7 @@
         "Measures the file's integrated loudness (about −26 LUFS) and its true peak, and reports the numbers.",
         "Says that YouTube does not publish an official loudness target (or that its normalisation is not documented with a number), instead of presenting −14 LUFS as YouTube's rule.",
         "Concludes the talk is quiet compared with common online references (such as −14 or −16 LUFS) and suggests choosing a target in the brief.",
-        "If it suggests normalising, it sets the integrated target and the true-peak ceiling explicitly (for example two-pass loudnorm with I and TP), rather than relying on loudnorm's defaults.",
+        "If it suggests a fix, it states the integrated target and the true-peak ceiling explicitly (a plain gain change with the resulting true peak, or two-pass loudnorm with I and TP set), rather than relying on loudnorm's defaults.",
         "Does not modify talk.mp4 or write a normalised copy."
       ]
     },
