@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 480" role="img" aria-labelledby="title desc">
+  <title id="title">Vibe Editing Agent Skills</title>
+  <desc id="desc">Raw takes on a source timeline; the kept clips move onto the output timeline with their captions, and the render passes review.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0b1220"/>
+      <stop offset="0.6" stop-color="#1e1b3a"/>
+      <stop offset="1" stop-color="#4c1d95"/>
+    </linearGradient>
+    <linearGradient id="clip" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#f59e0b"/>
+      <stop offset="1" stop-color="#f97316"/>
+    </linearGradient>
+  </defs>
+  <rect width="1280" height="480" fill="url(#bg)"/>
+
+  <g font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', Helvetica, Arial, sans-serif">
+    <text x="72" y="190" fill="#ffffff" font-size="60" font-weight="700">Vibe Editing</text>
+    <text x="72" y="250" fill="#ffffff" font-size="60" font-weight="700">Agent Skills</text>
+    <text x="72" y="306" fill="#cbd5e1" font-size="22">Raw takes → approved EDL → frame-accurate cut</text>
+    <text x="72" y="340" fill="#cbd5e1" font-size="22">→ captions on the new timeline → reviewed render</text>
+  </g>
+
+  <g transform="translate(730 92) scale(0.9)" font-family="ui-monospace, SFMono-Regular, Menlo, monospace">
+    <!-- Source timeline: kept clips, removed intervals hatched out -->
+    <text x="0" y="-14" fill="#94a3b8" font-size="16">source  take_02</text>
+    <rect x="0" y="0" width="500" height="44" rx="8" fill="#ffffff" fill-opacity="0.06" stroke="#94a3b8" stroke-opacity="0.4"/>
+    <rect x="20" y="6" width="120" height="32" rx="6" fill="url(#clip)"/>
+    <rect x="148" y="6" width="70" height="32" rx="6" fill="#ef4444" fill-opacity="0.25" stroke="#ef4444" stroke-dasharray="4 4"/>
+    <rect x="226" y="6" width="150" height="32" rx="6" fill="url(#clip)"/>
+    <rect x="384" y="6" width="44" height="32" rx="6" fill="#ef4444" fill-opacity="0.25" stroke="#ef4444" stroke-dasharray="4 4"/>
+    <rect x="436" y="6" width="54" height="32" rx="6" fill="url(#clip)"/>
+    <text x="183" y="27" text-anchor="middle" fill="#fecaca" font-size="13">pause</text>
+    <text x="406" y="27" text-anchor="middle" fill="#fecaca" font-size="13">э…</text>
+
+    <!-- Mapping -->
+    <g stroke="#e2e8f0" stroke-opacity="0.45" stroke-width="2" fill="none" stroke-dasharray="3 6">
+      <path d="M80 44 C80 90 80 90 80 120"/>
+      <path d="M300 44 C300 90 222 90 222 120"/>
+      <path d="M463 44 C463 90 352 90 352 120"/>
+    </g>
+
+    <!-- Output timeline -->
+    <rect x="0" y="120" width="500" height="44" rx="8" fill="#ffffff" fill-opacity="0.06" stroke="#94a3b8" stroke-opacity="0.4"/>
+    <rect x="20" y="126" width="120" height="32" rx="6" fill="url(#clip)"/>
+    <rect x="144" y="126" width="150" height="32" rx="6" fill="url(#clip)"/>
+    <rect x="298" y="126" width="54" height="32" rx="6" fill="url(#clip)"/>
+    <text x="510" y="148" fill="#94a3b8" font-size="16">output</text>
+
+    <!-- Captions on the output timeline -->
+    <rect x="20" y="176" width="112" height="22" rx="5" fill="#ffffff" fill-opacity="0.85"/>
+    <rect x="144" y="176" width="140" height="22" rx="5" fill="#ffffff" fill-opacity="0.85"/>
+    <rect x="298" y="176" width="54" height="22" rx="5" fill="#ffffff" fill-opacity="0.85"/>
+    <text x="510" y="193" fill="#94a3b8" font-size="16">srt</text>
+
+    <!-- Review -->
+    <rect x="0" y="232" width="430" height="54" rx="12" fill="#10b981" fill-opacity="0.16" stroke="#10b981" stroke-opacity="0.7"/>
+    <path d="M22 260 l12 12 l22 -24" stroke="#34d399" stroke-width="5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="72" y="266" fill="#d1fae5" font-size="17">156/156 frames · −14 LUFS · CAP 0</text>
+  </g>
+</svg>

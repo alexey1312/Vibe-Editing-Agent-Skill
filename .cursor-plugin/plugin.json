@@ -1,0 +1,15 @@
+{
+  "name": "vibe-editing-skills",
+  "version": "1.0.0",
+  "description": "Video editing by conversation: an approved edit decision list, frame-accurate FFmpeg renders, captions on the final timeline, and an evidence-based review of the render.",
+  "author": {
+    "name": "Aleksei Kakoulin",
+    "email": "alexey1312ru@gmail.com"
+  },
+  "repository": "https://github.com/alexey1312/Vibe-Editing-Agent-Skill",
+  "license": "MIT",
+  "skills": [
+    "./skills/vibe-editing-cut",
+    "./skills/vibe-editing-review"
+  ]
+}

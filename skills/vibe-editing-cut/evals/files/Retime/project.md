@@ -1,0 +1,6 @@
+# Retime test
+
+## State
+Approved EDL: edit/edl.json (approved by the author on 2026-10-14).
+Captions: transcripts/take.srt was made from the raw take, before the cut.
+Delivery: exports/final.srt next to the rendered cut.

@@ -1,0 +1,13 @@
+{
+  "name": "vibe-editing-agent-skill",
+  "private": true,
+  "description": "Agent Skills for cutting and reviewing video with an AI agent.",
+  "license": "MIT",
+  "keywords": ["pi-package", "agent-skill", "video-editing", "ffmpeg", "subtitles"],
+  "pi": {
+    "skills": [
+      "./skills/vibe-editing-cut",
+      "./skills/vibe-editing-review"
+    ]
+  }
+}

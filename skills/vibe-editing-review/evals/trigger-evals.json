@@ -1,0 +1,74 @@
+[
+  {
+    "query": "Check exports/final.mp4 before I publish it: anything broken, black frames, silence, loudness?",
+    "should_trigger": true
+  },
+  {
+    "query": "Проверь готовый ролик перед публикацией: субтитры, громкость, чёрные кадры.",
+    "should_trigger": true
+  },
+  {
+    "query": "Is my video loud enough for YouTube? Here's the render.",
+    "should_trigger": true
+  },
+  {
+    "query": "The render looks fine in preview but the MP4 has a black frame at the start and the subtitles drift. What went wrong?",
+    "should_trigger": true
+  },
+  {
+    "query": "Write a handoff for the next agent: what's approved, what's open, how to render.",
+    "should_trigger": true
+  },
+  {
+    "query": "Review this render against the brief and the approved edit and give me a list of fixes with timecodes.",
+    "should_trigger": true
+  },
+  {
+    "query": "Do the subtitles in final.srt follow the reading-speed and line-length limits, and are the names spelled right?",
+    "should_trigger": true
+  },
+  {
+    "query": "We've made three videos in this style by hand. How do we turn it into a template for a weekly series?",
+    "should_trigger": true
+  },
+  {
+    "query": "Cut my three takes into a 40-second video and remove the pauses.",
+    "should_trigger": false
+  },
+  {
+    "query": "Add plain subtitles to my interview video.",
+    "should_trigger": false
+  },
+  {
+    "query": "Run npx hyperframes check on my composition and fix the lint errors.",
+    "should_trigger": false
+  },
+  {
+    "query": "Render my Remotion composition to MP4 at 4K.",
+    "should_trigger": false
+  },
+  {
+    "query": "Make a promo video from our landing page.",
+    "should_trigger": false
+  },
+  {
+    "query": "Transcribe this audio file with WhisperX.",
+    "should_trigger": false
+  },
+  {
+    "query": "Review this pull request for bugs.",
+    "should_trigger": false
+  },
+  {
+    "query": "Compress this video so it's under 25 MB for Discord.",
+    "should_trigger": false
+  },
+  {
+    "query": "Generate a voiceover for this script in Russian.",
+    "should_trigger": false
+  },
+  {
+    "query": "Watch this video and tell me what happens in it.",
+    "should_trigger": false
+  }
+]

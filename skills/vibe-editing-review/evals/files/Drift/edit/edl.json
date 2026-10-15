@@ -1,0 +1,31 @@
+{
+  "fps": 30,
+  "width": 640,
+  "height": 360,
+  "sources": {
+    "take": "../originals/take.mov"
+  },
+  "clips": [
+    {
+      "id": "c01",
+      "source": "take",
+      "in": "00:00.50",
+      "out": "00:02.00",
+      "reason": "hook"
+    },
+    {
+      "id": "c02",
+      "source": "take",
+      "in": "00:03.20",
+      "out": "00:05.50",
+      "reason": "body"
+    },
+    {
+      "id": "c03",
+      "source": "take",
+      "in": "00:08.00",
+      "out": "00:09.40",
+      "reason": "end"
+    }
+  ]
+}

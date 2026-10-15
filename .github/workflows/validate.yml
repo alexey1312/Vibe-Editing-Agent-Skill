@@ -1,0 +1,40 @@
+name: Validate
+
+on:
+  pull_request:
+  push:
+    branches:
+      - main
+  schedule:
+    # Weekly: FFmpeg and the runner image move; the probes show what changed.
+    - cron: "17 6 * * 1"
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+      - name: Install FFmpeg
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y --no-install-recommends ffmpeg
+          ffmpeg -hide_banner -version | head -1
+      - name: Report what this machine can do
+        run: python3 scripts/toolchain_report.py --format markdown >> "$GITHUB_STEP_SUMMARY"
+      - name: Compile Python
+        run: python3 -m compileall -q scripts skills tests
+      - name: Check the skill copies
+        run: python3 scripts/sync_skill_copies.py --check
+      - name: Run tests
+        run: python3 -m unittest discover -s tests -v
+      - name: Re-measure FFmpeg behaviour
+        run: python3 scripts/probes/ffmpeg_probes.py --check --format markdown >> "$GITHUB_STEP_SUMMARY"
+      - name: Validate metadata
+        run: |
+          python3 -m json.tool .claude-plugin/plugin.json >/dev/null
+          python3 -m json.tool .claude-plugin/marketplace.json >/dev/null
+          python3 -m json.tool .cursor-plugin/plugin.json >/dev/null
+          python3 -m json.tool package.json >/dev/null

@@ -1,0 +1,29 @@
+{
+  "$schema": "https://raw.githubusercontent.com/anthropics/claude-code/refs/heads/main/marketplace/marketplace.schema.json",
+  "name": "vibe-editing-skills",
+  "version": "1.0.0",
+  "owner": {
+    "name": "Aleksei Kakoulin",
+    "email": "alexey1312ru@gmail.com"
+  },
+  "metadata": {
+    "description": "Cited, measured guidance for cutting and reviewing video with an AI agent, alongside the HyperFrames and Remotion skills."
+  },
+  "plugins": [
+    {
+      "name": "vibe-editing-skills",
+      "description": "Cut raw footage through an approved edit decision list, render it frame-accurately, retime captions and inserts, and review the render with evidence — every claim cited or measured with FFmpeg.",
+      "repository": "https://github.com/alexey1312/Vibe-Editing-Agent-Skill",
+      "version": "1.0.0",
+      "author": {
+        "name": "Aleksei Kakoulin",
+        "email": "alexey1312ru@gmail.com"
+      },
+      "license": "MIT",
+      "category": "productivity",
+      "keywords": ["video-editing", "vibe-editing", "ffmpeg", "edl", "subtitles", "loudness", "hyperframes", "remotion"],
+      "tags": ["video", "ffmpeg", "captions", "agent-skill"],
+      "source": "./"
+    }
+  ]
+}

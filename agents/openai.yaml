@@ -1,0 +1,22 @@
+name: vibe-editing-skills
+version: "1.0.0"
+description: >-
+  Cut raw footage by conversation through an approved edit decision list with
+  source and output times, render it frame-accurately with FFmpeg, retime
+  captions and inserts, and review the render with evidence, using read-only
+  scans first and approval-gated changes.
+author:
+  name: Aleksei Kakoulin
+  email: alexey1312ru@gmail.com
+repository: https://github.com/alexey1312/Vibe-Editing-Agent-Skill
+license: MIT
+logo: assets/logo.svg
+keywords:
+  - video-editing
+  - ffmpeg
+  - edl
+  - subtitles
+  - loudness
+skills:
+  - vibe-editing-cut
+  - vibe-editing-review

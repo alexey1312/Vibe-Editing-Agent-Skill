@@ -1,0 +1,11 @@
+1
+00:00:00,600 --> 00:00:01,900
+Hi, this is a short test.
+
+2
+00:00:03,300 --> 00:00:04,900
+Here is the main point.
+
+3
+00:00:08,100 --> 00:00:09,300
+And the closing line.

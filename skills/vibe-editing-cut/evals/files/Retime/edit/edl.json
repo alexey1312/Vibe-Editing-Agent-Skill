@@ -1,0 +1,35 @@
+{
+  "fps": 30,
+  "width": 640,
+  "height": 360,
+  "audio_fade_ms": 10,
+  "sources": {
+    "take": "../originals/take.mov"
+  },
+  "clips": [
+    {
+      "id": "c01",
+      "source": "take",
+      "in": "00:00.50",
+      "out": "00:02.00",
+      "role": "hook",
+      "reason": "приветствие"
+    },
+    {
+      "id": "c02",
+      "source": "take",
+      "in": "00:03.20",
+      "out": "00:05.50",
+      "role": "body",
+      "reason": "основная мысль без лишней фразы"
+    },
+    {
+      "id": "c03",
+      "source": "take",
+      "in": "00:08.00",
+      "out": "00:09.40",
+      "role": "end",
+      "reason": "финал"
+    }
+  ]
+}

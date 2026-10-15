@@ -1,0 +1,76 @@
+{
+  "skill_name": "vibe-editing-review",
+  "evals": [
+    {
+      "id": 1,
+      "name": "review-before-publish",
+      "prompt": "Проверь evals/files/Promo/exports/final.mp4 перед публикацией. Бриф — в brief.md рядом.",
+      "expected_output": "Findings with output times and evidence: square 1080×1080 instead of 1080×1920; black first 0.5 s; silence 2.5–4.6 s; 8.5 s file against a 5.2 s EDL; a frozen picture 3.5–6.5 s; caption 'Сlaude' with a Cyrillic letter and a cue after 5.2 s; integrated loudness measured against −14 LUFS; a list of what was not checked; nothing modified.",
+      "files": [
+        "evals/files/Promo"
+      ],
+      "media": "evals/media/Promo.sh",
+      "expectations": [
+        "Reports that the file is 1080×1080, not the 1080×1920 the brief asks for.",
+        "Reports the black picture at the very start (about the first 0.5 s), with its time.",
+        "Reports the silence from about 2.5 s to about 4.6 s, with its times.",
+        "Reports that the file (about 8.5 s) is longer than the approved EDL adds up to (5.2 s) or than the brief's about 5 seconds.",
+        "Reports a caption problem from final.srt: the word 'Сlaude' mixes Cyrillic and Latin letters (it does not match the glossary's 'Claude Code'), or a cue runs past the end of the approved cut.",
+        "Measures the integrated loudness and true peak and compares them with the brief's −14 LUFS and −1 dBTP.",
+        "Lists what it could not check by scanning (meaning, rhythm, legibility on a phone, rights) and asks for, or says it lacks, one full viewing with sound.",
+        "Does not modify, re-render or normalise any file."
+      ]
+    },
+    {
+      "id": 2,
+      "name": "youtube-loudness",
+      "prompt": "Is the loudness of evals/files/Talk/exports/talk.mp4 right for YouTube? Check it, but don't change the file.",
+      "expected_output": "Integrated loudness about −26 LUFS and true peak measured from the file; YouTube publishes no official loudness target, so −14 is not YouTube's rule; suggests a target from the brief or a cited reference such as −14 or −16 LUFS with a −1 dBTP ceiling, and two-pass loudnorm with explicit targets; the file is untouched.",
+      "files": [
+        "evals/files/Talk"
+      ],
+      "media": "evals/media/Talk.sh",
+      "expectations": [
+        "Measures the file's integrated loudness (about −26 LUFS) and its true peak, and reports the numbers.",
+        "Says that YouTube does not publish an official loudness target (or that its normalisation is not documented with a number), instead of presenting −14 LUFS as YouTube's rule.",
+        "Concludes the talk is quiet compared with common online references (such as −14 or −16 LUFS) and suggests choosing a target in the brief.",
+        "If it suggests normalising, it sets the integrated target and the true-peak ceiling explicitly (for example two-pass loudnorm with I and TP), rather than relying on loudnorm's defaults.",
+        "Does not modify talk.mp4 or write a normalised copy."
+      ]
+    },
+    {
+      "id": 3,
+      "name": "handoff-to-another-agent",
+      "prompt": "Tomorrow another agent takes over the project in evals/files/Launch. Bring evals/files/Launch/project.md up to date as the handoff, using today's notes in evals/files/Launch/notes.md. Go ahead.",
+      "expected_output": "project.md names edl_v2 as the approved EDL and draft_v3 as the last good render, the preview, render and QA commands, both open defects with output times, the undecided price question for the author, and the next two steps; no other file changes.",
+      "files": [
+        "evals/files/Launch"
+      ],
+      "media": "evals/media/Launch.sh",
+      "expectations": [
+        "project.md names edit/edl_v2.json as the approved EDL and renders/draft_v3.mp4 as the last good render (and no longer presents edl_v1 or draft_v2 as current).",
+        "project.md lists the commands to preview, render a draft and run the QA scan.",
+        "project.md lists both open defects with their output times (the caption over the Export button at 00:18.6, the loud music from 00:31 to 00:36).",
+        "project.md says the author must decide whether the price is shown on screen or only said.",
+        "project.md gives the next steps (fix the caption position, then duck the music).",
+        "Changes no file other than project.md."
+      ]
+    },
+    {
+      "id": 4,
+      "name": "captions-drift-diagnosis",
+      "prompt": "After the first cut the subtitles in evals/files/Drift/exports/final.srt appear later and later and the last one hangs after the video ends. The approved cut is edit/edl.json. What's wrong? Don't fix it yet.",
+      "expected_output": "The SRT is still on the source timeline: its times match the take, not the cut (cues at 3.3 and 8.1 s should be at 1.6 and 3.9 s; the last ends after the 5.2 s video); the fix is to retime from the EDL or rebuild from word times; nothing changed.",
+      "files": [
+        "evals/files/Drift"
+      ],
+      "media": "evals/media/Drift.sh",
+      "expectations": [
+        "Identifies the cause: the captions still use source (pre-cut) times and were not moved onto the output timeline after the cut removed intervals.",
+        "Supports it with evidence from the files: a cue time compared with the EDL's output times (for example 3.3 s should become 1.6 s, 8.1 s should become 3.9 s), or the last cue ending after the 5.2 s video.",
+        "Proposes the fix: retime the captions through the EDL (or rebuild them from word timestamps on the output timeline) instead of shifting all cues by one offset.",
+        "Does not modify any file."
+      ]
+    }
+  ]
+}

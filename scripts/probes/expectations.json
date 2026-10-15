@@ -1,0 +1,51 @@
+{
+  "M1": {
+    "title": "edl.py render keeps exactly the planned frames, and the audio lands where `edl.py map` says",
+    "expect": {
+      "frames_expected": 156,
+      "frames_rendered": 156,
+      "frames_wrong": 0,
+      "beep_error_ms": {"max": 1.0}
+    }
+  },
+  "M2": {
+    "title": "`-ss` before `-i` with `-c copy` starts the file at the keyframe before the cut point",
+    "expect": {
+      "packets_in_file": {"min": 85},
+      "first_frame_editlist_honoured": 4.0,
+      "first_frame_editlist_ignored": 3.0
+    }
+  },
+  "M3": {
+    "title": "a hard audio join makes a step far steeper than the tone; 10 ms fades remove it",
+    "expect": {
+      "step_ratio_fade_0ms": {"min": 5.0},
+      "step_ratio_fade_10ms": {"max": 1.0}
+    }
+  },
+  "M4": {
+    "title": "the concat filter rejects mixed picture sizes; the concat demuxer with -c copy accepts them without a word",
+    "expect": {
+      "filter_exit_ok": false,
+      "filter_error_says_do_not_match": true,
+      "demuxer_exit_ok": true,
+      "demuxer_reported_size": "320x180"
+    }
+  },
+  "M5": {
+    "title": "rotation metadata leaves the coded size unchanged; media_probe reports the displayed size",
+    "expect": {
+      "coded": "320x180",
+      "displayed": "180x320",
+      "decoded_frame": "180x320",
+      "rotation": 90
+    }
+  },
+  "M6": {
+    "title": "the packet scan flags a variable-frame-rate file and passes a constant one",
+    "expect": {
+      "vfr_flagged": true,
+      "cfr_flagged": false
+    }
+  }
+}

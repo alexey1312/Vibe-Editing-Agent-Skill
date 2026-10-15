@@ -1,0 +1,74 @@
+[
+  {
+    "query": "I have three takes of my intro and a screen recording. Cut them into a 40-second vertical video and remove the pauses.",
+    "should_trigger": true
+  },
+  {
+    "query": "Вот мои дубли, собери из них ролик на минуту: убери оговорки и длинные паузы.",
+    "should_trigger": true
+  },
+  {
+    "query": "Turn this 50-minute podcast recording into three self-contained 30-second clips for Reels.",
+    "should_trigger": true
+  },
+  {
+    "query": "Remove the ums, false starts and long silences from this talking-head recording, but keep my breathing natural.",
+    "should_trigger": true
+  },
+  {
+    "query": "After I cut the pauses, my subtitles are out of sync. How do I move them onto the new timeline?",
+    "should_trigger": true
+  },
+  {
+    "query": "Which tool should I use to edit raw interview footage with an AI agent: video-use, HyperFrames or Descript?",
+    "should_trigger": true
+  },
+  {
+    "query": "My iPhone clips drift out of sync after cutting them with ffmpeg. How do I prepare them before editing?",
+    "should_trigger": true
+  },
+  {
+    "query": "Сделай монтажный лист с таймкодами исходников для этих двух дублей, а потом черновой монтаж без эффектов.",
+    "should_trigger": true
+  },
+  {
+    "query": "Write a cut list from this transcript: pick the best take of each sentence and give source in and out points.",
+    "should_trigger": true
+  },
+  {
+    "query": "Add plain subtitles to this finished interview; the footage must stay exactly as it is.",
+    "should_trigger": false
+  },
+  {
+    "query": "Make a 10-second animated logo sting with motion graphics for our brand.",
+    "should_trigger": false
+  },
+  {
+    "query": "Build a HyperFrames composition for our product launch from this website URL.",
+    "should_trigger": false
+  },
+  {
+    "query": "Write a Remotion component that animates a bar chart from JSON data.",
+    "should_trigger": false
+  },
+  {
+    "query": "Watch this YouTube video and summarise what the speaker says about pricing.",
+    "should_trigger": false
+  },
+  {
+    "query": "Check my finished video before I publish it: black frames, loudness and subtitles.",
+    "should_trigger": false
+  },
+  {
+    "query": "Generate an 8-second AI video of a cat surfing at sunset.",
+    "should_trigger": false
+  },
+  {
+    "query": "Master my podcast audio to -16 LUFS for Apple Podcasts.",
+    "should_trigger": false
+  },
+  {
+    "query": "Convert this MKV to MP4 without re-encoding.",
+    "should_trigger": false
+  }
+]

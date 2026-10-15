@@ -1,0 +1,90 @@
+{
+  "skill_name": "vibe-editing-cut",
+  "evals": [
+    {
+      "id": 1,
+      "name": "plan-cut-from-two-takes",
+      "prompt": "Вот исходники и бриф ролика в evals/files/Intro/. Смонтируй из них ролик по брифу. Сначала план.",
+      "expected_output": "Inventory flags the variable frame rate of take_01, the rotation of take_02 and the mixed frame rates, with working copies; the plan picks takes with source in/out times and reasons, keeps the condition about exporting to MP4, cuts the loading wait in the screen recording, lists removed intervals as candidates, keeps all audio local, and waits for approval without rendering.",
+      "files": [
+        "evals/files/Intro"
+      ],
+      "media": "evals/media/Intro.sh",
+      "expectations": [
+        "Finds from the media itself (for example with ffprobe or the skill's media inventory) at least two of: take_01.mp4 has a variable frame rate, take_02.mov is a portrait picture stored with rotation metadata, the sources have different frame rates (screen_01 at 60 fps) — and plans working copies at the delivery frame rate instead of cutting the originals.",
+        "Proposes the cut as a list of clips, each with its source file, source in and out times and a reason, and gives the output order or output times.",
+        "Uses take 2 for the opening sentence, or otherwise avoids take 1's false start ('Сегодня покажу, как… э…' followed by a restart), and says why.",
+        "Keeps the condition that the advice works only if the project is first exported to MP4 (the brief says it must stay).",
+        "Removes or shortens the loading wait in screen_01.mov (about 00:02.0–00:06.0) while keeping the Export click and the finished file in the cut.",
+        "Lists the intervals it would remove (the false start, the long pause, fillers such as 'э…' or 'Ну вот') as items for the author to approve, not as finished cuts.",
+        "Does not propose sending audio or video to a cloud service (the brief forbids it); uses the existing local transcripts.",
+        "Does not render, cut or write any media file, and asks the author to approve the plan or its items before doing so."
+      ]
+    },
+    {
+      "id": 2,
+      "name": "retime-captions-after-cut",
+      "prompt": "Монтаж утверждён: evals/files/Retime/edit/edl.json. Субтитры evals/files/Retime/transcripts/take.srt сделаны по исходному дублю, до монтажа. Сделай субтитры для смонтированного ролика в evals/files/Retime/exports/final.srt. Сделай это сейчас.",
+      "expected_output": "exports/final.srt on the output timeline: cue 1 at 0.1 s, the removed sentence gone, the main thought at 1.6 s, the closing line at 3.9 s; the cue that crosses the cut at 5.5 s is flagged or rebuilt from word times; the EDL and the source captions are unchanged; the result is checked.",
+      "files": [
+        "evals/files/Retime"
+      ],
+      "media": "evals/media/Retime.sh",
+      "expectations": [
+        "exports/final.srt places the captions on the output timeline of the cut: the first cue starts at about 00:00:00,100, 'Здесь остаётся основная мысль.' starts at about 00:00:01,600, and 'И финальная фраза.' starts at about 00:00:03,900.",
+        "exports/final.srt does not contain the sentence 'Эту фразу мы вырезали.', which lies inside a removed interval.",
+        "Reports that the cue 'А этот хвост режется посередине.' crosses a cut (source 5.0–6.2 s, cut at 5.5 s), and either shortens it to the part that remains or rebuilds it from word timestamps, rather than keeping its full original length.",
+        "Checks the result (for example with the skill's caption check, or by comparing every cue with the cut's length of 5.2 s) and reports the check.",
+        "Leaves edit/edl.json and transcripts/take.srt unchanged."
+      ]
+    },
+    {
+      "id": 3,
+      "name": "stream-copy-extra-second",
+      "prompt": "I cut clips with `ffmpeg -ss 4 -i talk.mp4 -t 2 -c copy clip.mp4`, and Premiere shows an extra second or so at the start of some clips that VLC doesn't show. Why, and how should I cut so every clip starts exactly where I asked?",
+      "expected_output": "With stream copy, ffmpeg starts the file at the keyframe before the seek point and hides the extra frames with an MP4 edit list that some programs ignore; cut with re-encoding (accurate seek or trim) or only at keyframes; check the keyframe interval; verify by comparing frames.",
+      "files": [],
+      "expectations": [
+        "Explains that with stream copy ffmpeg can only start the clip at a keyframe, so it includes the frames from the keyframe before 4 s.",
+        "Explains why the two programs differ: the extra frames are hidden by an MP4 edit list (or timestamps before zero) that one player honours and the other ignores.",
+        "Recommends re-encoding the cut for frame-exact clips (input seeking is accurate when transcoding, or the trim filter), or cutting only at keyframes if the cut must stay a stream copy.",
+        "Does not claim that moving -ss after -i while keeping -c copy gives a clean, frame-exact start.",
+        "Suggests a way to check: the keyframe interval (for example with ffprobe) or comparing the first frame of the clip with the frame at 4 s."
+      ]
+    },
+    {
+      "id": 4,
+      "name": "captions-only-route",
+      "prompt": "The interview in evals/files/Interview/interview.mp4 is final. I only need plain Russian subtitles on it; the edit must not change. How do we do it? Plan only.",
+      "expected_output": "A captions-only route (HyperFrames embedded-captions, or a recogniser plus an SRT and a burn-in or sidecar), no re-cut and no EDL; where the audio goes for recognition is a decision for the author; the caption limits and a glossary check; nothing run.",
+      "files": [
+        "evals/files/Interview"
+      ],
+      "media": "evals/media/Interview.sh",
+      "expectations": [
+        "Does not plan to re-cut, shorten or reorder the interview, and does not build an edit decision list for it.",
+        "Proposes a captions-only route: HyperFrames' embedded-captions workflow, or speech recognition into an SRT file delivered as a sidecar or burned in without changing the edit.",
+        "Asks or states where the audio goes for speech recognition (a local recogniser or a named cloud service) as a decision for the author before transcribing.",
+        "Includes checking the subtitle text and timing (names and numbers against a glossary, line length or reading speed) before delivery.",
+        "Does not run speech recognition, install anything or modify any file."
+      ]
+    },
+    {
+      "id": 5,
+      "name": "podcast-clips",
+      "prompt": "Find two or three self-contained clips of 15–45 seconds in evals/files/Podcast/transcripts/episode.json for vertical social video. Show me the selection first; don't render anything.",
+      "expected_output": "A selection table with source in/out times, the thesis, the context a viewer lacks and the risk; the onboarding and pricing segments qualify, the pricing clip keeps its 'only for teams under ten' caveat; the 'That's why it failed' line is rejected because it depends on earlier context; openings only from words that were said; nothing rendered.",
+      "files": [
+        "evals/files/Podcast"
+      ],
+      "expectations": [
+        "Gives each proposed clip its source in and out times from the transcript, its main point, and the risk of losing meaning or the missing context.",
+        "Proposes the onboarding result (seven screens cut to two, completion from thirty to seventy percent) as a clip, or explains why not.",
+        "If it proposes the flat-pricing clip (sign-ups doubled), it keeps the caveat that this held only for teams under ten people, or flags that cutting the caveat would mislead.",
+        "Rejects or flags 'That's why it failed, basically. Because of that.' as an opening, because it refers to earlier context the viewer of the clip does not have.",
+        "Does not present invented wording as speech: any hook or title it suggests is marked as on-screen text or built from words that were said.",
+        "Does not render or cut anything, and asks the author to choose or approve clips."
+      ]
+    }
+  ]
+}

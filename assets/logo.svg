@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-labelledby="title">
+  <title id="title">Vibe Editing Agent Skills</title>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#4c1d95"/>
+      <stop offset="1" stop-color="#0b1220"/>
+    </linearGradient>
+    <linearGradient id="clip" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#f59e0b"/>
+      <stop offset="1" stop-color="#f97316"/>
+    </linearGradient>
+  </defs>
+  <rect width="128" height="128" rx="28" fill="url(#bg)"/>
+  <!-- A source strip with one interval cut out, and the joined output below -->
+  <rect x="16" y="34" width="38" height="20" rx="5" fill="url(#clip)"/>
+  <rect x="58" y="34" width="18" height="20" rx="5" fill="#ef4444" fill-opacity="0.3" stroke="#ef4444" stroke-width="2" stroke-dasharray="3 3"/>
+  <rect x="80" y="34" width="32" height="20" rx="5" fill="url(#clip)"/>
+  <path d="M64 58 V70" stroke="#ffffff" stroke-opacity="0.6" stroke-width="3" stroke-linecap="round"/>
+  <rect x="26" y="76" width="38" height="20" rx="5" fill="url(#clip)"/>
+  <rect x="66" y="76" width="32" height="20" rx="5" fill="url(#clip)"/>
+  <rect x="26" y="100" width="72" height="8" rx="4" fill="#ffffff" fill-opacity="0.85"/>
+</svg>

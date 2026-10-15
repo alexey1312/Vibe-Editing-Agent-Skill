@@ -1,0 +1,15 @@
+{
+  "fps": 30,
+  "sources": {
+    "take3": "../originals/take_03.mp4"
+  },
+  "clips": [
+    {
+      "id": "c01",
+      "source": "take3",
+      "in": 1.0,
+      "out": 12.0,
+      "reason": "v2"
+    }
+  ]
+}
