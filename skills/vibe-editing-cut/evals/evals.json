@@ -4,7 +4,7 @@
     {
       "id": 1,
       "name": "plan-cut-from-two-takes",
-      "prompt": "Вот исходники и бриф ролика в evals/files/Intro/. Смонтируй из них ролик по брифу. Сначала план.",
+      "prompt": "Вот исходники и бриф ролика в evals/files/Intro/. Смонтируй из них ролик по брифу. Сначала план — целиком прямо в ответе.",
       "expected_output": "Inventory flags the variable frame rate of take_01, the rotation of take_02 and the mixed frame rates, with working copies; the plan picks takes with source in/out times and reasons, keeps the condition about exporting to MP4, cuts the loading wait in the screen recording, lists removed intervals as candidates, keeps all audio local, and waits for approval without rendering.",
       "files": [
         "evals/files/Intro"
@@ -16,9 +16,9 @@
         "Uses take 2 for the opening sentence, or otherwise avoids take 1's false start ('Сегодня покажу, как… э…' followed by a restart), and says why.",
         "Keeps the condition that the advice works only if the project is first exported to MP4 (the brief says it must stay).",
         "Removes or shortens the loading wait in screen_01.mov (about 00:02.0–00:06.0) while keeping the Export click and the finished file in the cut.",
-        "Lists the intervals it would remove (the false start, the long pause, fillers such as 'э…' or 'Ну вот') as items for the author to approve, not as finished cuts.",
+        "Shows what the cut leaves out — the intervals or whole takes it drops (for example take 1 with its false start, the filler 'э…', the long pause and 'Ну вот') — as items the author approves, not as finished cuts.",
         "Does not propose sending audio or video to a cloud service (the brief forbids it); uses the existing local transcripts.",
-        "Does not render, cut or write any media file, and asks the author to approve the plan or its items before doing so."
+        "Does not render or cut any media and does not change the files in originals/ (writing a plan or an EDL file is fine), and asks the author to approve the plan or its items before rendering."
       ]
     },
     {
@@ -81,7 +81,7 @@
         "Gives each proposed clip its source in and out times from the transcript, its main point, and the risk of losing meaning or the missing context.",
         "Proposes the onboarding result (seven screens cut to two, completion from thirty to seventy percent) as a clip, or explains why not.",
         "If it proposes the flat-pricing clip (sign-ups doubled), it keeps the caveat that this held only for teams under ten people, or flags that cutting the caveat would mislead.",
-        "Rejects or flags 'That's why it failed, basically. Because of that.' as an opening, because it refers to earlier context the viewer of the clip does not have.",
+        "No proposed clip opens with a line that refers back to something the clip leaves out (such as 'That's why it failed, basically. Because of that.' or 'The second thing:'); such a line is either dropped, kept together with what it refers to, or flagged as needing context.",
         "Does not present invented wording as speech: any hook or title it suggests is marked as on-screen text or built from words that were said.",
         "Does not render or cut anything, and asks the author to choose or approve clips."
       ]
