@@ -23,6 +23,8 @@ These skills make the agent write the cut as an edit decision list (EDL) with a 
 wait for approval, keep source time and output time apart,
 and say what it checked and what it did not.
 
+**Website:** <https://blog.kakoulin.com/apps/vibe-editing-agent-skills>
+
 ## Works alongside HyperFrames and Remotion
 
 [HyperFrames](https://github.com/heygen-com/hyperframes) and
